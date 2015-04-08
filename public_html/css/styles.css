@@ -27,6 +27,10 @@ Auteur: Quentin Fonck
   -webkit-filter: grayscale(0);
 }
 /* Gobal variiables*/
+body,
+html {
+  overflow-x: hidden;
+}
 footer,
 header {
   background-color: #00529c;
@@ -43,14 +47,6 @@ header {
 header .row {
   margin-top: 10px;
 }
-section > .row {
-  margin-top: 150px;
-}
-@media (max-width: 767px) {
-  section > .row {
-    margin-top: 15px;
-  }
-}
 a {
   color: inherit;
   text-decoration: none;
@@ -62,38 +58,6 @@ a:hover {
 a:focus {
   color: inherit;
   text-decoration: none;
-}
-#mockup {
-  display: inline-block;
-  float: left;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  #mockup {
-    top: 75px;
-  }
-}
-#mockup img {
-  height: auto;
-}
-@media (max-width: 767px) {
-  #mockup img {
-    width: 286px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  #mockup img {
-    width: 218px;
-  }
-}
-@media (min-width: 992px) {
-  #mockup img {
-    width: 437px;
-  }
-}
-@media (min-width: 768px) {
-  #mockup + div {
-    left: 20%;
-  }
 }
 .navigation {
   display: inline-block;
@@ -110,6 +74,32 @@ a:focus {
 .navigation span {
   position: relative;
   bottom: 2px;
+}
+#drop {
+  float: right;
+  position: relative;
+  bottom: 5px;
+}
+#drop:hover {
+  opacity: 1.0;
+}
+#dropdown {
+  position: relative;
+  top: 42px;
+  z-index: 10;
+  width: 100%;
+  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d0d0d0));
+  background: -webkit-linear-gradient(top, #ffffff, #d0d0d0);
+  background: -moz-linear-gradient(top, #ffffff, #d0d0d0);
+  background: -ms-linear-gradient(top, #ffffff, #d0d0d0);
+  background: -o-linear-gradient(top, #ffffff, #d0d0d0);
+  list-style-type: none;
+  min-height: 30px;
+}
+#dropdown > li > a {
+  position: relative;
+  bottom: 10px;
 }
 footer {
   width: 100%;
@@ -212,6 +202,71 @@ footer {
   -moz-box-shadow: inset 0 2px 10px 0 rgba(0, 0, 0, 0.4);
   box-shadow: inset 0 2px 10px 0 rgba(0, 0, 0, 0.4);
 }
+span.icon-fleche {
+  left: 6px;
+  font-size: 12px;
+}
+span.icon-fleche.header {
+  top: 1px;
+}
+span.icon-fleche.plus {
+  top: 2px;
+  position: relative;
+}
+.textFooter {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 14tpx;
+  color: #ffffff;
+  display: table-cell;
+  vertical-align: middle;
+}
+.gras {
+  font-weight: 600;
+}
+button {
+  outline: 0;
+}
+section > .row {
+  margin-top: 150px;
+}
+@media (max-width: 767px) {
+  section > .row {
+    margin-top: 15px;
+  }
+}
+#mockup {
+  display: inline-block;
+  float: left;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #mockup {
+    top: 75px;
+  }
+}
+#mockup img {
+  height: auto;
+}
+@media (max-width: 767px) {
+  #mockup img {
+    width: 286px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #mockup img {
+    width: 218px;
+  }
+}
+@media (min-width: 992px) {
+  #mockup img {
+    width: 437px;
+  }
+}
+@media (min-width: 768px) {
+  #mockup + div {
+    left: 20%;
+  }
+}
 .button-group {
   margin-top: 25px;
   margin-bottom: 40px;
@@ -240,28 +295,6 @@ footer {
     left: 55px;
   }
 }
-span.icon-fleche {
-  left: 6px;
-  font-size: 12px;
-}
-span.icon-fleche.header {
-  top: 1px;
-}
-span.icon-fleche.plus {
-  top: 2px;
-  position: relative;
-}
-.textFooter {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 300;
-  font-size: 14tpx;
-  color: #ffffff;
-  display: table-cell;
-  vertical-align: middle;
-}
-.gras {
-  font-weight: 600;
-}
 #more {
   margin-left: 28%;
   text-align: center;
@@ -276,10 +309,31 @@ span.icon-fleche.plus {
     margin-left: 35%;
   }
 }
-#more > a:hover {
+#more:hover {
   color: black;
 }
-button {
-  outline: 0;
+nav.textFooter {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  float: right;
+  text-align: right;
+}
+#slider {
+  background: url(../img/Homepage/Slider_image.jpg) no-repeat;
+  background-size: cover;
+  height: 450px;
+}
+#background {
+  width: 100%;
+  height: auto;
+  background-size: 100%;
+  background: url(../img/Homepage/Img_Footer.jpg) no-repeat;
+}
+#forme {
+  background-size: cover;
+  background: url(../img/Homepage/Forme_Footer.png) no-repeat;
+  background-position: center bottom;
+  width: 100%;
+  height: 337px;
 }
 /*# sourceMappingURL=styles.css.map */
