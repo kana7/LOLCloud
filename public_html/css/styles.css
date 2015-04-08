@@ -58,6 +58,16 @@ a:focus {
   color: inherit;
   text-decoration: none;
 }
+#mockup {
+  width: 437px;
+  height: auto;
+  display: inline-block;
+  float: left;
+}
+#mockup img {
+  width: 100%;
+  height: auto;
+}
 .navigation {
   display: inline-block;
   margin-top: 15px;
@@ -87,6 +97,8 @@ footer {
   box-shadow: 0px -1px 10px 0 rgba(0, 0, 0, 0.4);
 }
 .semi-opac {
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
   opacity: 0.5;
 }
 .logo {
@@ -106,7 +118,7 @@ footer {
   height: auto;
 }
 .heading2 {
-  line-height: 26px;
+  line-height: 32px;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   font-size: 26px;
@@ -124,6 +136,62 @@ footer {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+}
+.button.primary {
+  border: 1px solid #03417a;
+  background-color: #00529c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00529c), to(#03417a));
+  background: -webkit-linear-gradient(top, #00529c, #03417a);
+  background: -moz-linear-gradient(top, #00529c, #03417a);
+  background: -ms-linear-gradient(top, #00529c, #03417a);
+  background: -o-linear-gradient(top, #00529c, #03417a);
+}
+.button.primary:active {
+  -webkit-box-shadow: inset 0 2px 10px 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 2px 10px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 2px 10px 0 rgba(0, 0, 0, 0.4);
+}
+.button.default {
+  color: #555555;
+  border: 1px solid #d0d0d0;
+  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d0d0d0));
+  background: -webkit-linear-gradient(top, #ffffff, #d0d0d0);
+  background: -moz-linear-gradient(top, #ffffff, #d0d0d0);
+  background: -ms-linear-gradient(top, #ffffff, #d0d0d0);
+  background: -o-linear-gradient(top, #ffffff, #d0d0d0);
+}
+.button.default:active {
+  -webkit-box-shadow: inset 0 2px 10px 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 2px 10px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 2px 10px 0 rgba(0, 0, 0, 0.4);
+}
+.button-group {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+.button-group span {
+  margin-left: 12px;
+  margin-right: 12px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #555555;
+}
+span.icon-fleche {
+  left: 6px;
+  font-size: 12px;
+}
+span.icon-fleche.header {
+  top: 1px;
+}
+span.icon-fleche.plus {
+  top: 2px;
+  position: relative;
 }
 .textFooter {
   font-family: 'Source Sans Pro', sans-serif;
@@ -144,7 +212,10 @@ footer {
   font-size: 16px;
   color: #555555;
 }
-#more span {
-  fill: #555555;
+#more:hover {
+  color: black;
+}
+button {
+  outline: 0;
 }
 /*# sourceMappingURL=styles.css.map */
