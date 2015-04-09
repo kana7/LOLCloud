@@ -41,7 +41,8 @@ Auteur: Quentin Fonck
 /* Gobal variiables*/
 body,
 html {
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 footer,
 header {
@@ -50,15 +51,9 @@ header {
 }
 header {
   height: 66px;
-  -webkit-box-shadow: inset 0 -10px 20px 0 rgba(0, 0, 0, 0.3) !important;
-  -moz-box-shadow: inset 0 -10px 20px 0 rgba(0, 0, 0, 0.3) !important;
-  box-shadow: inset 0 -10px 20px 0 rgba(0, 0, 0, 0.3) !important;
-  -webkit-box-shadow: 0px 1px 10px 0 rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 1px 10px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 1px 10px 0 rgba(0, 0, 0, 0.4);
 }
 header .row {
-  margin-top: 10px;
+  height: 100%;
 }
 a {
   color: inherit;
@@ -81,7 +76,8 @@ ul > li {
 }
 .navigation {
   display: inline-block;
-  margin-top: 15px;
+  position: relative;
+  top: 35%;
   float: right;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
@@ -89,8 +85,7 @@ ul > li {
   color: #ffffff;
 }
 .navigation > ul {
-  position: relative;
-  bottom: 15px;
+  margin: 0;
 }
 .navigation span {
   position: relative;
@@ -129,15 +124,31 @@ footer {
   left: 0;
   padding-left: 0px !important;
   padding-right: 0px !important;
-  -webkit-box-shadow: inset 0 -10px 20px 0 rgba(0, 0, 0, 0.3) !important;
-  -moz-box-shadow: inset 0 -10px 20px 0 rgba(0, 0, 0, 0.3) !important;
-  box-shadow: inset 0 -10px 20px 0 rgba(0, 0, 0, 0.3) !important;
-  -webkit-box-shadow: 0px -1px 10px 0 rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px -1px 10px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0px -1px 10px 0 rgba(0, 0, 0, 0.4);
 }
 footer.contenue {
   position: initial;
+}
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+footer ul li {
+  margin-right: 10px;
+}
+footer ul li a.link {
+  font-size: 14px;
+}
+footer ul li a.link.active {
+  border-bottom: 1px solid #ffffff;
+  -webkit-opacity: 1 !important;
+  -moz-opacity: 1 !important;
+  opacity: 1 !important;
+}
+footer ul li a.link.gras {
+  -webkit-opacity: 1 !important;
+  -moz-opacity: 1 !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
 }
 .semi-opac {
   -webkit-opacity: 0.5;
@@ -149,7 +160,7 @@ footer.contenue {
   float: left;
 }
 .logo.petit {
-  width: 182px;
+  width: 160px;
   height: 41px;
 }
 .logo.grand {
@@ -242,7 +253,7 @@ span.icon-fleche.plus {
 .textFooter {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
-  font-size: 14tpx;
+  font-size: 14px;
   color: #ffffff;
   display: table-cell;
   vertical-align: middle;
@@ -254,22 +265,17 @@ button {
   outline: 0;
 }
 .shadow.top {
-  -webkit-box-shadow: 0px -4px 20px 0 rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px -4px 20px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0px -4px 20px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
 }
 .shadow.down {
-  -webkit-box-shadow: 0px 4px 20px 0 rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 4px 20px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 4px 20px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
 }
 .titre {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
-  font-size: 30px;
-  color: #ffffff;
   text-align: center;
-  line-height: 40px;
   text-shadow: 0 4px 7px rgba(0, 0, 0, 0.25);
   position: relative;
   top: 50%;
@@ -278,10 +284,23 @@ button {
   transform: translateY(-50%);
   top: 63%;
 }
+.titre h2 {
+  line-height: 40px;
+  width: 710px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #ffffff;
+}
 .titre a.link {
   font-size: 20px !important;
-  position: relative;
-  bottom: 8px;
+  margin-top: 5px;
+  -webkit-opacity: 1 !important;
+  -moz-opacity: 1 !important;
+  opacity: 1 !important;
 }
 a.link {
   text-align: center;
@@ -299,6 +318,13 @@ a.link.white {
   -moz-opacity: 0.5;
   opacity: 0.5;
   color: #ffffff;
+}
+a.link.white.active {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  pointer-events: none;
+  cursor: default;
 }
 a.link.white:hover {
   -webkit-opacity: 1;
@@ -388,8 +414,10 @@ nav.textFooter {
   text-align: right;
 }
 #slider {
-  background: url(../img/Homepage/Slider_image.jpg) no-repeat;
+  background: url(../img/Homepage/Slider_image.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-position-y: -10px;
   height: 450px;
   width: 100%;
@@ -397,17 +425,103 @@ nav.textFooter {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-#background {
-  width: 100%;
-  height: auto;
-  background-size: 100%;
-  background: url(../img/Homepage/Img_Footer.jpg) no-repeat;
+#slider h2 span {
+  font-weight: 300;
 }
-#forme {
-  background-size: cover;
-  background: url(../img/Homepage/Forme_Footer.png) no-repeat;
+#background {
+  height: 1250px;
+  background: url(../img/Homepage/LOL_Cloud_Details_Homepage_960px.png);
+  background-size: 1920px auto;
+  background-repeat: no-repeat;
   background-position: center bottom;
-  width: 100%;
-  height: 337px;
+}
+#background .bottom {
+  top: 650px;
+  position: relative;
+}
+#background .bottom h2 {
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: #ffffff;
+}
+#background .bottom h2 span {
+  font-weight: 300;
+}
+#background .bottom h3 {
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+}
+#background .bottom p {
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  text-align: justify;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+}
+#background .top {
+  text-align: center;
+}
+#background .top h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  color: #00529c;
+}
+#background .top p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #555555;
+}
+#background .top p span {
+  color: #00529c;
+}
+#background .middle {
+  top: 40px;
+  position: relative;
+}
+#background .middle h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  color: #00529c;
+}
+#background .middle p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #555555;
+  text-align: justify;
+}
+@media (min-width: 992px) {
+  #background .middle p {
+    width: 80%;
+  }
+}
+#background .middle p span {
+  color: #00529c;
+}
+#background .middle .link {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #00529c;
+}
+#background .middle .link span {
+  position: relative;
+  bottom: -2px;
+  left: 10px;
+}
+#background .image {
+  text-align: right;
+  padding-top: 7%;
+  float: right;
+  right: 0%;
 }
 /*# sourceMappingURL=styles.css.map */

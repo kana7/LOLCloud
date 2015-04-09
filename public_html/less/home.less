@@ -5,24 +5,93 @@ nav.textFooter{
     text-align: right;
 }
 #slider{
-    background: url(../img/Homepage/Slider_image.jpg) no-repeat;
+    background: url(../img/Homepage/Slider_image.jpg);
+    background-repeat:no-repeat;
     background-size: cover;
+    background-position:center;
     background-position-y: -10px;
     height:450px;
     width: 100%;
     .parent-element;
+    h2{
+        span{
+            font-weight: 300;
+        }
+    }
 }
 
 #background{
-    width: 100%;
-    height: auto;
-    background-size: 100%;
-    background: url(../img/Homepage/Img_Footer.jpg) no-repeat;
-}
-#forme{
-    background-size: cover;
-    background: url(../img/Homepage/Forme_Footer.png) no-repeat;
-    background-position: center bottom; 
-    width: 100%;
-    height: 337px;
+
+    height: 1250px;
+    background: url(../img/Homepage/LOL_Cloud_Details_Homepage_960px.png);
+    background-size: 1920px auto;
+    background-repeat:no-repeat;
+    background-position: center bottom;
+
+    .bottom{
+        top: 650px;
+        position: relative;
+        h2{
+            .text-shadow(0 2px 1px rgba(0, 0, 0, 0.4));
+            .semiBold(@size-heading2, @blanc);
+            span{
+                font-weight: 300;
+            }
+        }
+
+        h3{
+            .text-shadow(0 2px 1px rgba(0, 0, 0, 0.4));
+            .semiBold(@size-heading3, @blanc);
+        }
+        p{
+            .text-shadow(0 2px 1px rgba(0, 0, 0, 0.4));
+            text-align: justify;
+            .regular(@size-text, @blanc);
+        }
+    }
+
+    .top{
+        text-align: center;
+        h2{
+            .regular(@size-heading2, @bleu);
+        }
+        p{
+            .regular(@size-heading3, @gris);
+            span{
+                color: @bleu;
+            }
+        }
+    }
+
+    .middle{
+        top: 40px;
+        position: relative;
+        h2{
+            .regular(@size-heading2, @bleu);
+        }
+        p{
+            .regular(@size-text, @gris);
+            @media @desktop{
+                width: 80%;    
+            }
+            text-align: justify;
+            span{
+                color:@bleu;
+            }
+        }
+        .link{
+            .semiBold(@size-text, @bleu);
+            span{
+                position: relative;
+                bottom: -2px;
+                left: 10px;
+            }
+        }
+    }
+    .image{
+        text-align: right;
+        padding-top: 7%;
+        float: right;
+        right: 0%;
+    }
 }

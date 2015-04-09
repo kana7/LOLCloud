@@ -1,5 +1,5 @@
 body,html{
-    overflow-x: hidden;    
+    margin: 0; padding: 0;
 }
 
 footer, header{
@@ -10,10 +10,10 @@ footer, header{
 
 header{
     height: 66px;
-    .inner-shadow( 0, -10px, 20px, 0, 0.3) !important;
-    .drop-shadow(0px, 1px, 10px,0, 0.4);
+    //.inner-shadow( 0, 10px, 20px, 0, 0.3) !important;
     .row{
-        margin-top: 10px;
+        //margin-top: 5px;
+        height: 100%;
     }
 }
 
@@ -40,12 +40,12 @@ ul{
 
 .navigation{
     display: inline-block;
-    margin-top: 15px;
+    position: relative;
+    top: 35%;
     float: right;
     .regular(@size-text, @blanc);
     &>ul{
-        position: relative;
-        bottom:15px;
+        margin: 0;
     }
     span{
         position: relative;
@@ -82,10 +82,27 @@ footer{
     left: 0;
     padding-left: 0px !important;
     padding-right: 0px !important;
-    .inner-shadow( 0, -10px, 20px, 0, 0.3) !important;
-    .drop-shadow(0px, -1px, 10px,0, 0.4);
+    //.inner-shadow( 0, -10px, 20px, 0, 0.3) !important;
     &.contenue{
         position: initial;
+    }
+    ul{
+        padding:0;
+        margin:0;
+        li{
+            margin-right: 10px;
+            a.link{
+                font-size: @size-foot;
+                &.active{
+                    border-bottom: 1px solid @blanc;
+                    .opacity(1.0) !important;
+                }
+                &.gras{
+                    .opacity(1.0) !important;
+                    font-weight: 600 !important;
+                }
+            }
+        } 
     }
 }
 
@@ -97,7 +114,7 @@ footer{
     display: inline-block;
     float:left;
     &.petit{
-        width: 182px;
+        width: 160px;
         height: 41px;
     }
     &.grand{
@@ -177,24 +194,30 @@ button{
 
 .shadow{
     &.top{
-        .drop-shadow(0px, -4px,20px,0, 0.4);
+        .drop-shadow(0px, 0px, 2px, 1px, 0.3);
     }
     &.down{
-        .drop-shadow(0px, 4px,20px,0, 0.4);
+        .drop-shadow(0px, 0px, 2px, 1px, 0.3);
     }
 }
 
 .titre{
-    .semiBold(@size-ban1, @blanc);
     text-align: center;
-    line-height: 40px;
     .text-shadow(0 4px 7px rgba(0, 0, 0, 0.25));
     .vertical-center;
     top:63%;
+    h2{
+        line-height: 40px;
+        width: 710px;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        .semiBold(@size-ban1, @blanc);
+    }
     a.link{
         font-size: 20px !important;
-        position: relative;
-        bottom: 8px;
+        margin-top: 5px;
+        .opacity(1.0) !important;
     }
 }
 
@@ -208,6 +231,11 @@ a.link{
     &.white{
         .opacity(0.5);
         color:@blanc;
+        &.active{
+            .opacity(1.0);
+            pointer-events: none;
+            cursor: default;
+        }
         &:hover{
             .opacity(1.0);
         }
