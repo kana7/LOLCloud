@@ -26,6 +26,18 @@ Auteur: Quentin Fonck
   /* Applies to FF + IE */
   -webkit-filter: grayscale(0);
 }
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.parent-element {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
 /* Gobal variiables*/
 body,
 html {
@@ -34,6 +46,7 @@ html {
 footer,
 header {
   background-color: #00529c;
+  z-index: 5;
 }
 header {
   height: 66px;
@@ -59,6 +72,13 @@ a:focus {
   color: inherit;
   text-decoration: none;
 }
+ul {
+  list-style-type: none;
+}
+ul > li {
+  display: inline;
+  margin-right: 35px;
+}
 .navigation {
   display: inline-block;
   margin-top: 15px;
@@ -68,8 +88,9 @@ a:focus {
   font-size: 16px;
   color: #ffffff;
 }
-.navigation:hover {
-  opacity: 1.0;
+.navigation > ul {
+  position: relative;
+  bottom: 15px;
 }
 .navigation span {
   position: relative;
@@ -106,12 +127,17 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
   -webkit-box-shadow: inset 0 -10px 20px 0 rgba(0, 0, 0, 0.3) !important;
   -moz-box-shadow: inset 0 -10px 20px 0 rgba(0, 0, 0, 0.3) !important;
   box-shadow: inset 0 -10px 20px 0 rgba(0, 0, 0, 0.3) !important;
   -webkit-box-shadow: 0px -1px 10px 0 rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px -1px 10px 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0px -1px 10px 0 rgba(0, 0, 0, 0.4);
+}
+footer.contenue {
+  position: initial;
 }
 .semi-opac {
   -webkit-opacity: 0.5;
@@ -227,6 +253,58 @@ span.icon-fleche.plus {
 button {
   outline: 0;
 }
+.shadow.top {
+  -webkit-box-shadow: 0px -4px 20px 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px -4px 20px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0px -4px 20px 0 rgba(0, 0, 0, 0.4);
+}
+.shadow.down {
+  -webkit-box-shadow: 0px 4px 20px 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 4px 20px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 4px 20px 0 rgba(0, 0, 0, 0.4);
+}
+.titre {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  text-shadow: 0 4px 7px rgba(0, 0, 0, 0.25);
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 63%;
+}
+.titre a.link {
+  font-size: 20px !important;
+  position: relative;
+  bottom: 8px;
+}
+a.link {
+  text-align: center;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #555555;
+}
+a.link:hover {
+  color: black;
+}
+a.link.white {
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  color: #ffffff;
+}
+a.link.white:hover {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
 section > .row {
   margin-top: 150px;
 }
@@ -297,20 +375,11 @@ section > .row {
 }
 #more {
   margin-left: 28%;
-  text-align: center;
-  width: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: #555555;
 }
 @media (max-width: 767px) {
   #more {
     margin-left: 35%;
   }
-}
-#more:hover {
-  color: black;
 }
 nav.textFooter {
   margin-top: 14px;
@@ -321,7 +390,12 @@ nav.textFooter {
 #slider {
   background: url(../img/Homepage/Slider_image.jpg) no-repeat;
   background-size: cover;
+  background-position-y: -10px;
   height: 450px;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 #background {
   width: 100%;

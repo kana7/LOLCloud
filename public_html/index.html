@@ -16,33 +16,35 @@
         <![endif]-->
     </head>
     <body>
-        <header class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="logo petit">
-                        <img src="img/Logo_LOL_CLOUD.png" alt="logo-header"/>
+        <div class="shadow down">
+            <header class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="logo petit">
+                            <img src="img/Logo_LOL_CLOUD.png" alt="logo-header"/>
+                        </div>
+                        <nav class="navigation semi-opac gras hidden-xs">
+                            <a href="#">Télécharger LOL CLOUD<span class="icon-fleche header"></span></a>
+                        </nav>
+                        <nav id="drop" class="semi-opac visible-xs">
+                            <a href="#">
+                                <svg version="1.1" id="Calque_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="82px" height="63px"  enable-background="new 0 0 35 22" xml:space="preserve">
+                                <g>
+                                <rect x="23.502" y="20.532" width="35" height="4" fill="white"/>
+                                <rect x="23.502" y="29.532" width="35" height="4" fill="white"/>
+                                <rect x="23.502" y="38.532" width="35" height="4" fill="white"/>
+                                </g>
+                                </svg>
+                            </a>
+                        </nav>
+                        <ul id="dropdown" style="display:none;">
+                            <li><a href="#">Télécharger LOL CLOUD<span class="icon-fleche header"></span></a></li>
+                        </ul>
                     </div>
-                    <nav class="navigation semi-opac gras hidden-xs">
-                        <a href="#">Télécharger LOL CLOUD<span class="icon-fleche header"></span></a>
-                    </nav>
-                    <nav id="drop" class="semi-opac visible-xs">
-                        <a href="#">
-                            <svg version="1.1" id="Calque_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                 width="82px" height="63px"  enable-background="new 0 0 35 22" xml:space="preserve">
-                            <g>
-                            <rect x="23.502" y="20.532" width="35" height="4" fill="white"/>
-                            <rect x="23.502" y="29.532" width="35" height="4" fill="white"/>
-                            <rect x="23.502" y="38.532" width="35" height="4" fill="white"/>
-                            </g>
-                            </svg>
-                        </a>
-                    </nav>
-                    <ul id="dropdown" style="display:none;">
-                        <li><a href="#">Télécharger LOL CLOUD<span class="icon-fleche header"></span></a></li>
-                    </ul>
                 </div>
-            </div>
-        </header>
+            </header>
+        </div>
 
         <section class="container" >
             <div class="row">
@@ -65,22 +67,23 @@
                         <button class="button default"><a href="#">Se connecter</a></button>
                     </div>
                     <div class="row">
-                        <a id="more" href="#">En savoir plus<span class="icon-fleche plus"></span></a>
+                        <a id="more" class="link" href="#">En savoir plus<span class="icon-fleche plus"></span></a>
                     </div>
                 </div>
             </div>
         </section>
 
         <footer class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <p class="col-xs-12 textFooter">
-                        Copyright © 2015 Luxembourg Online S.A.
-                    </p>
+            <div class="shadow top">
+                <div class="container">
+                    <div class="row">
+                        <p class="col-xs-12 textFooter">
+                            Copyright © 2015 Luxembourg Online S.A.
+                        </p>
+                    </div>
                 </div>
             </div>
         </footer>
-
         <script type="text/javascript" src="js/jquery.js"></script>
     </body>
 </html>

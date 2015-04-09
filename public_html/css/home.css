@@ -7,7 +7,9 @@ nav.textFooter {
 #slider {
   background: url(../img/Homepage/Slider_image.jpg) no-repeat;
   background-size: cover;
+  background-position-y: -10px;
   height: 450px;
+  width: 100%;
 }
 #background {
   width: 100%;

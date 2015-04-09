@@ -16,46 +16,96 @@
         <![endif]-->
     </head>
     <body>
-        <header class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="logo petit">
-                        <img src="img/Logo_LOL_CLOUD.png" alt="logo-header"/>
+        <div class="shadow down">
+            <header class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="logo petit">
+                            <img src="img/Logo_LOL_CLOUD.png" alt="logo-header"/>
+                        </div>
+                        <nav class="navigation contenue col-sm-9 hidden-xs">
+                            <ul class="col-lg-7 hidden-sm">
+                                <li>
+                                    <a href="#" class="link white">
+                                        Accueil<span class="icon-fleche header"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link white">
+                                        Détails<span class="icon-fleche header"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link white">
+                                        Aide<span class="icon-fleche header"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link white">
+                                        Contact<span class="icon-fleche header"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul style="float: right; width: 30%;">
+                                <li style="margin-right: 5px;">
+                                    <a href="#" class="link white">S'inscrire</a>
+                                </li>
+                                <li style="margin-right: 5px;">l</li>
+                                <li>
+                                    <a href="#" class="link white">Se connecter</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav id="drop" class="semi-opac visible-xs">
+                            <a href="#">
+                                <svg version="1.1" id="Calque_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="82px" height="63px"  enable-background="new 0 0 35 22" xml:space="preserve">
+                                <g>
+                                <rect x="23.502" y="20.532" width="35" height="4" fill="white"/>
+                                <rect x="23.502" y="29.532" width="35" height="4" fill="white"/>
+                                <rect x="23.502" y="38.532" width="35" height="4" fill="white"/>
+                                </g>
+                                </svg>
+                            </a>
+                        </nav>
+                        <ul id="dropdown" style="display:none;">
+                            <li><a href="#">Télécharger LOL CLOUD<span class="icon-fleche header"></span></a></li>
+                        </ul>
                     </div>
-                    <nav class="navigation semi-opac gras hidden-xs">
-                        <a href="#">Télécharger LOL CLOUD<span class="icon-fleche header"></span></a>
-                    </nav>
-                    <nav id="drop" class="semi-opac visible-xs">
-                        <a href="#">
-                            <svg version="1.1" id="Calque_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                 width="82px" height="63px"  enable-background="new 0 0 35 22" xml:space="preserve">
-                            <g>
-                            <rect x="23.502" y="20.532" width="35" height="4" fill="white"/>
-                            <rect x="23.502" y="29.532" width="35" height="4" fill="white"/>
-                            <rect x="23.502" y="38.532" width="35" height="4" fill="white"/>
-                            </g>
-                            </svg>
-                        </a>
-                    </nav>
-                    <ul id="dropdown" style="display:none;">
-                        <li><a href="#">Télécharger LOL CLOUD<span class="icon-fleche header"></span></a></li>
-                    </ul>
                 </div>
-            </div>
-        </header>
-        <div>
+            </header>
+        </div>
             <div id="slider">
-
+                <div class="titre">
+                    Testez gratuitement notre nouveau service LOL <span style="font-weight: 400;">CLOUD</span><br/>
+                    Et recevez gratuitement 5GB GRATUIT !<br/>
+                    <a class="link white" href="#">Inscription en ligne <span class="icon-fleche"></span></a>
+                </div>
             </div>
             <section id="content">
                 <div id="background">
-
+                    <div class="container">
+                        <div class="row">
+                            <h2>Vos documents Voyagent avec vous.</h2>
+                            <p>LOL CLOUD est une solution de stockage en ligne de vos documents développée par Luxembourg Online.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="img/Homepage/Icone_SE_CONNECTER.png" alt="icon-folder-cadenas"/>
+                            </div>
+                            <div class="col-lg-6">
+                                <h2>Se connecter à votre compte.</h2>
+                                <p>Avec LOL Cloud, une adresse email et un mot de passe suffisent opur vous connecter. Toutes vos données sont à portée de clics.</p>
+                                <a href="¨#"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div id="forme">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6">
-                                
+
                             </div>
                             <div class="col-lg-6">
                                 <img src="img/Logo_LOL_CLOUD.png" alt="logo-cloud"/>
@@ -64,16 +114,17 @@
                     </div>
                 </div>
             </section>
-        </div>
-        <footer class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <p class="col-sm-6 col-xs-12 textFooter">
-                        Copyright © 2015 Luxembourg Online S.A.
-                    </p>
-                    <nav class="textFooter col-sm-6 hidden-xs">
-                        <span><a href="#">Acceuil</a>  |  <a href="#">Détails</a>  |  <a href="#">Aide</a>  |  <a href="#">Contact</a>  |  <a class="gras" href="#">S'inscrire</a>  |  <a class="gras" href="#">Se connecter</a></span>
-                    </nav>
+        <footer class="contenue container-fluid">
+            <div class="shadow top">
+                <div class="container">
+                    <div class="row">
+                        <p class="col-sm-6 col-xs-12 textFooter">
+                            Copyright © 2015 Luxembourg Online S.A.
+                        </p>
+                        <nav class="textFooter col-sm-6 hidden-xs">
+                            <span><a href="#">Acceuil</a>  l  <a href="#">Détails</a>  l  <a href="#">Aide</a>  l  <a href="#">Contact</a>  l  <a class="gras" href="#">S'inscrire</a>  l  <a class="gras" href="#">Se connecter</a></span>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </footer>
