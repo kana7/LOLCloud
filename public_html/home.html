@@ -23,7 +23,7 @@
                         <div class="logo petit" style="margin-top: 13px;">
                             <img src="img/Logo_LOL_CLOUD.png" alt="logo-header"/>
                         </div>
-                        <nav class="navigation contenue col-sm-9 hidden-xs">
+                        <nav class="navigation contenue col-sm-4 col-md-9 hidden-xs">
                             <ul class="col-md-7 hidden-sm">
                                 <li>
                                     <a href="#" class="link white active">
@@ -46,7 +46,7 @@
                                     </a>
                                 </li>
                             </ul>
-                            <ul class="col-md-5 col-md-push-1" style="float: right; position: relative;">
+                            <ul id="connect">
                                 <li style="margin-right: 5px;">
                                     <a href="#" class="link white">S'inscrire</a>
                                 </li>
@@ -56,7 +56,7 @@
                                 </li>
                             </ul>
                         </nav>
-                        <nav id="drop" class="semi-opac visible-xs">
+                        <nav id="drop" class="semi-opac visible-sm-inline-block visible-xs-inline-block">
                             <a href="#">
                                 <svg version="1.1" id="Calque_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      width="82px" height="63px"  enable-background="new 0 0 35 22" xml:space="preserve">
@@ -68,18 +68,18 @@
                                 </svg>
                             </a>
                         </nav>
-                        <ul id="dropdown" style="display:none;">
-                            <li><a href="#">Télécharger LOL CLOUD<span class="icon-fleche header"></span></a></li>
-                        </ul>
                     </div>
+                    <ul id="dropdown">
+                        <li><a href="#">Télécharger LOL CLOUD<span class="icon-fleche header"></span></a></li>
+                    </ul>
                 </div>
             </header>
         </div>
         <div id="slider">
-            <div class="titre">
-                <h2>
-                    Testez gratuitement notre nouveau service LOL <span>CLOUD</span> et recevez gratuitement 5GB GRATUIT !
-                </h2>
+            <div class="titre container">
+                <div>
+                    Testez gratuitement notre nouveau service LOL <span>CLOUD</span> <br/>et recevez gratuitement 5GB GRATUIT !
+                </div>
                 <a class="link white" href="#">Inscription en ligne <span class="icon-fleche"></span></a>
             </div>
         </div>
@@ -94,21 +94,24 @@
                     </div>
                     <div class="middle row">
                         <div class="col-xs-12 col-sm-4">
-                            <img src="img/Homepage/Icone_SE_CONNECTER.png" alt="icon-folder-cadenas"/>
+                            <img class="dossier" src="img/Homepage/Icone_SE_CONNECTER.png" alt="icon-folder-cadenas"/>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-sm-push-2 col-md-push-3">
+                        <div class="col-xs-12 col-sm-7 col-md-6 col-sm-push-1 col-md-push-3">
                             <h2>Se connecter à votre compte.</h2>
                             <p><span>Avec <span class="gras">LOL</span> Cloud</span>, une adresse email et un mot de passe suffisent pour vous connecter. Toutes vos données sont à portée de clics.</p>
-                            <a href="¨#" class="link">Connexion<span class="icon-fleche"></span></a>
+                            <a href="http://lolcloud.internet.lu/" class="link">Connexion<span class="icon-fleche"></span></a>
                         </div>
                     </div>
                     <div class="bottom row">
-                        <div class="col-sm-6">
+                        <div class="logo grand visible-xs-block">
+                            <img src="img/Logo_LOL_CLOUD.png"/>
+                        </div>
+                        <div class="text">
                             <h2>POURQUOI LOL <span>CLOUD</span> ?</h2>
                             <h3>VOS FICHIERS, PARTOUT OÙ VOUS VOULEZ.</h3>
                             <p>Le service stockage en ligne de Luxembourg Online vous permet de stocker et partager des documents, images, vidéos dans un espace en ligne, accessible de partout.</p>
                         </div>
-                        <div class="col-sm-4 image">
+                        <div class="logo grand hidden-xs">
                             <img src="img/Logo_LOL_CLOUD.png"/>
                         </div>
                     </div>
@@ -119,10 +122,10 @@
             <div class="shadow top">
                 <div class="container">
                     <div class="row">
-                        <p class="col-sm-6 col-xs-12 textFooter">
+                        <p class="col-sm-5 col-xs-12 textFooter">
                             Copyright © 2015 Luxembourg Online S.A.
                         </p>
-                        <nav class="textFooter col-sm-6 hidden-xs">
+                        <nav class="textFooter col-sm-7 hidden-xs">
                             <ul style="width: 100%;">
                                 <li>
                                     <a href="#" class="link white active">Accueil</a>
@@ -154,5 +157,6 @@
             </div>
         </footer>
         <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

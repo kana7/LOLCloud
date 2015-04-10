@@ -43,6 +43,7 @@ body,
 html {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 footer,
 header {
@@ -77,7 +78,7 @@ ul > li {
 .navigation {
   display: inline-block;
   position: relative;
-  top: 35%;
+  top: 22px;
   float: right;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
@@ -91,19 +92,35 @@ ul > li {
   position: relative;
   bottom: 2px;
 }
+.navigation #connect {
+  float: right;
+  padding-left: 0px;
+  display: inline-block;
+  text-align: right;
+}
 #drop {
   float: right;
   position: relative;
-  bottom: 5px;
+  top: 2px;
 }
 #drop:hover {
-  opacity: 1.0;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+#drop.active {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
 }
 #dropdown {
   position: relative;
-  top: 42px;
+  top: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
   z-index: 10;
   width: 100%;
+  display: none;
   background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d0d0d0));
   background: -webkit-linear-gradient(top, #ffffff, #d0d0d0);
@@ -113,14 +130,16 @@ ul > li {
   list-style-type: none;
   min-height: 30px;
 }
-#dropdown > li > a {
-  position: relative;
-  bottom: 10px;
+#dropdown.open {
+  display: block;
+}
+#dropdown li {
+  display: block;
+  margin-right: 0px;
 }
 footer {
   width: 100%;
   position: absolute;
-  bottom: 0;
   left: 0;
   padding-left: 0px !important;
   padding-right: 0px !important;
@@ -134,6 +153,11 @@ footer ul {
 }
 footer ul li {
   margin-right: 10px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer ul li {
+    margin-right: 3px;
+  }
 }
 footer ul li a.link {
   font-size: 14px;
@@ -164,8 +188,33 @@ footer ul li a.link.gras {
   height: 41px;
 }
 .logo.grand {
-  width: 274px;
-  height: 62px;
+  float: right;
+  position: absolute;
+  top: 65px;
+  right: 0;
+}
+@media (min-width: 992px) {
+  .logo.grand {
+    width: 274px;
+    height: 62px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo.grand {
+    width: 194px;
+    height: 44px;
+    top: 94px;
+  }
+}
+@media (max-width: 767px) {
+  .logo.grand {
+    width: 194px;
+    height: 44px;
+    clear: both;
+    float: none;
+    position: static;
+    margin: 0 auto;
+  }
 }
 .logo img {
   width: 100%;
@@ -258,6 +307,11 @@ span.icon-fleche.plus {
   display: table-cell;
   vertical-align: middle;
 }
+@media (max-width: 767px) {
+  .textFooter {
+    text-align: center;
+  }
+}
 .gras {
   font-weight: 600;
 }
@@ -282,25 +336,8 @@ button {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  top: 63%;
-}
-.titre h2 {
-  line-height: 40px;
-  width: 710px;
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
-  font-size: 30px;
-  color: #ffffff;
-}
-.titre a.link {
-  font-size: 20px !important;
-  margin-top: 5px;
-  -webkit-opacity: 1 !important;
-  -moz-opacity: 1 !important;
-  opacity: 1 !important;
+  top: 55%;
+  clear: both;
 }
 a.link {
   text-align: center;
@@ -331,12 +368,23 @@ a.link.white:hover {
   -moz-opacity: 1;
   opacity: 1;
 }
+@media (max-width: 767px) {
+  .dossier {
+    width: 143px;
+    height: auto;
+  }
+}
 section > .row {
   margin-top: 150px;
 }
 @media (max-width: 767px) {
   section > .row {
     margin-top: 15px;
+  }
+}
+@media (max-width: 767px) {
+  section .row:nth-child(3) {
+    text-align: center;
   }
 }
 #mockup {
@@ -404,7 +452,7 @@ section > .row {
 }
 @media (max-width: 767px) {
   #more {
-    margin-left: 35%;
+    margin-left: 0%;
   }
 }
 nav.textFooter {
@@ -414,55 +462,100 @@ nav.textFooter {
   text-align: right;
 }
 #slider {
-  background: url(../img/Homepage/Slider_image.jpg);
-  background-repeat: no-repeat;
+  background: url(../img/Homepage/Slider_image.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  background-position-y: -10px;
-  height: 450px;
+  height: 555px;
   width: 100%;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-#slider h2 span {
+@media (min-width: 768px) and (max-width: 991px) {
+  #slider {
+    background: url(../img/Homepage/slider_640px.jpg) no-repeat;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (max-width: 767px) {
+  #slider {
+    background: url(../img/Homepage/slider_320px.jpg) no-repeat;
+    height: 261px;
+    background-size: cover;
+    background-position: center;
+  }
+}
+#slider div {
+  line-height: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #ffffff;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #slider div {
+    line-height: 30px;
+    font-size: 23px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 767px) {
+  #slider div {
+    line-height: 30px;
+    font-size: 23px;
+    font-weight: 600;
+  }
+}
+#slider div span {
   font-weight: 300;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #slider div span {
+    font-weight: 400;
+  }
+}
+#slider a.link {
+  font-size: 20px !important;
+  margin-top: 5px;
+  -webkit-opacity: 1 !important;
+  -moz-opacity: 1 !important;
+  opacity: 1 !important;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #slider a.link {
+    font-size: 18px !important;
+    font-weight: 600;
+  }
+}
+@media (max-width: 767px) {
+  #slider a.link {
+    font-size: 16px !important;
+    font-weight: 600;
+  }
 }
 #background {
   height: 1250px;
-  background: url(../img/Homepage/LOL_Cloud_Details_Homepage_960px.png);
+  background: url(../img/Homepage/LOL_Cloud_Details_Homepage_960px.png) no-repeat;
   background-size: 1920px auto;
-  background-repeat: no-repeat;
   background-position: center bottom;
 }
-#background .bottom {
-  top: 650px;
-  position: relative;
+@media (min-width: 768px) and (max-width: 991px) {
+  #background {
+    height: 1110px;
+    background: url(../img/Homepage/LOL_Cloud_Details_Homepage_640px.png) no-repeat;
+    background-size: 992px auto;
+    background-position: center bottom;
+  }
 }
-#background .bottom h2 {
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
-  font-size: 26px;
-  color: #ffffff;
-}
-#background .bottom h2 span {
-  font-weight: 300;
-}
-#background .bottom h3 {
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  color: #ffffff;
-}
-#background .bottom p {
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
-  text-align: justify;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: #ffffff;
+@media (max-width: 767px) {
+  #background {
+    height: 1200px;
+    background: url(../img/Homepage/LOL_Cloud_Details_Homepage_320px.png) no-repeat;
+    background-size: 100% 800px;
+    background-position: center bottom;
+  }
 }
 #background .top {
   text-align: center;
@@ -473,6 +566,14 @@ nav.textFooter {
   font-size: 26px;
   color: #00529c;
 }
+@media (max-width: 767px) {
+  #background .top h2 {
+    font-size: 24px;
+    width: 78%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 #background .top p {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
@@ -482,26 +583,49 @@ nav.textFooter {
 #background .top p span {
   color: #00529c;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  #background .top p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  #background .top p {
+    font-size: 16px;
+  }
+}
 #background .middle {
   top: 40px;
   position: relative;
+}
+@media (max-width: 767px) {
+  #background .middle {
+    top: 30px;
+    text-align: center;
+  }
 }
 #background .middle h2 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   font-size: 26px;
   color: #00529c;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 #background .middle p {
+  margin-top: 10px;
+  margin-bottom: 20px;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #555555;
+  width: 80%;
   text-align: justify;
 }
-@media (min-width: 992px) {
+@media (max-width: 767px) {
   #background .middle p {
-    width: 80%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
   }
 }
 #background .middle p span {
@@ -517,6 +641,87 @@ nav.textFooter {
   position: relative;
   bottom: -2px;
   left: 10px;
+}
+#background .bottom {
+  position: relative;
+}
+@media (min-width: 992px) {
+  #background .bottom {
+    top: 650px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #background .bottom {
+    top: 510px;
+  }
+}
+@media (max-width: 767px) {
+  #background .bottom {
+    text-align: center;
+    top: 340px;
+  }
+}
+#background .bottom .text {
+  float: left;
+  position: absolute;
+  display: inline-block;
+  width: 440px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #background .bottom .text {
+    width: 400px;
+  }
+}
+@media (max-width: 767px) {
+  #background .bottom .text {
+    width: 100%;
+    display: block;
+    clear: both;
+  }
+}
+#background .bottom .text h2 {
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: #ffffff;
+}
+#background .bottom .text h2 span {
+  font-weight: 300;
+}
+@media (max-width: 767px) {
+  #background .bottom .text h2 {
+    margin-top: 45px;
+  }
+}
+#background .bottom .text h3 {
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  #background .bottom .text h3 {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 35px;
+  }
+}
+#background .bottom .text p {
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  text-align: justify;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  #background .bottom .text p {
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+  }
 }
 #background .image {
   text-align: right;

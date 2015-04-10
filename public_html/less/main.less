@@ -1,11 +1,11 @@
 body,html{
     margin: 0; padding: 0;
+    overflow-x: hidden;
 }
 
 footer, header{
     background-color: @bleu;
     z-index: 5;
-
 }
 
 header{
@@ -41,7 +41,7 @@ ul{
 .navigation{
     display: inline-block;
     position: relative;
-    top: 35%;
+    top: 22px;
     float: right;
     .regular(@size-text, @blanc);
     &>ul{
@@ -51,34 +51,49 @@ ul{
         position: relative;
         bottom: 2px;
     }
+    #connect{
+        float: right; 
+        padding-left: 0px;
+        display: inline-block;
+        text-align: right;
+    }
 }
 
 #drop{
     float: right;
     position: relative;
-    bottom:5px;
+    top: 2px;
     &:hover{
-        opacity: 1.0;  
+        .opacity(1.0);  
+    }
+    &.active{
+        .opacity(1.0);  
     }
 }
 #dropdown{
     position: relative;
-    top:42px;
+    top:0;
+    margin-top: 0px;
+    margin-bottom: 0px;
     z-index: 10;
     width: 100%;
+    display: none;
     .gradient(@blanc, @light-gris);
     list-style-type: none;
     min-height: 30px;
-    &>li>a{
-        position: relative;
-        bottom: 10px;;
+    &.open{
+        display: block;
+    }
+    li{
+        display: block;
+        margin-right: 0px;
     }
 }
 
 footer{
     width: 100%;
     position: absolute;
-    bottom: 0;
+    //bottom: 0px;
     left: 0;
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -91,6 +106,9 @@ footer{
         margin:0;
         li{
             margin-right: 10px;
+            @media @tablet{
+                margin-right: 3px;
+            }
             a.link{
                 font-size: @size-foot;
                 &.active{
@@ -118,15 +136,35 @@ footer{
         height: 41px;
     }
     &.grand{
-        width: 274px;
-        height: 62px;
+        float: right;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        @media @desktop{
+            width: 274px;
+            height: 62px;    
+        }
+        @media @tablet{
+            width: 194px;
+            height: 44px;  
+            top:94px;
+        }
+        @media @phone{
+            width: 194px;
+            height: 44px;  
+            clear:both;
+            float:none;
+            position: static;
+            margin: 0 auto;
+        }
     }
-
     img{
         width: 100%;
         height: auto;
     }
 }
+
+
 .heading2{
     line-height: 32px;
     .regular(@size-heading2, @bleu);
@@ -183,6 +221,9 @@ span.icon-fleche{
     .light(@size-foot, @blanc);
     display: table-cell;
     vertical-align: middle;
+    @media @phone{
+        text-align: center;
+    }
 }
 .gras{
     font-weight: 600;
@@ -205,20 +246,8 @@ button{
     text-align: center;
     .text-shadow(0 4px 7px rgba(0, 0, 0, 0.25));
     .vertical-center;
-    top:63%;
-    h2{
-        line-height: 40px;
-        width: 710px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-        .semiBold(@size-ban1, @blanc);
-    }
-    a.link{
-        font-size: 20px !important;
-        margin-top: 5px;
-        .opacity(1.0) !important;
-    }
+    top:55%;
+    clear:both;
 }
 
 a.link{
@@ -239,5 +268,12 @@ a.link{
         &:hover{
             .opacity(1.0);
         }
+    }
+}
+
+.dossier{
+    @media @phone{
+        width: 143px;
+        height:auto;
     }
 }
