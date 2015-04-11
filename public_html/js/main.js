@@ -16,4 +16,12 @@ $(function () {
         $('#dropdown').removeClass('open');
         $('#drop').removeClass('active');
     });
+    
+    $('#dropdown>li').on('click',function(){
+        var url = $(this).children().attr('href');
+        console.log(url);
+        if(url != 'undefined') {
+            window.location = url;
+        }
+    });
 });

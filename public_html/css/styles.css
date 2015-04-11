@@ -273,7 +273,6 @@ footer ul li a.link.gras {
   }
 }
 .button {
-  width: 150px;
   height: 31px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -285,6 +284,8 @@ footer ul li a.link.gras {
   font-weight: 600;
   font-size: 16px;
   color: #ffffff;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .button.primary {
   border: 1px solid #03417a;
@@ -417,16 +418,119 @@ a.link.bleu {
     height: auto;
   }
 }
-section > .row {
+div.row.bottom .text {
+  float: left;
+  display: inline-block;
+  width: 440px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  div.row.bottom .text {
+    width: 400px;
+  }
+}
+@media (max-width: 767px) {
+  div.row.bottom .text {
+    width: 100%;
+    display: block;
+    clear: both;
+  }
+}
+div.row.bottom .text h2 {
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: #ffffff;
+}
+div.row.bottom .text h2 span {
+  font-weight: 300;
+}
+@media (max-width: 767px) {
+  div.row.bottom .text h2 {
+    margin-top: 45px;
+  }
+}
+div.row.bottom .text h3 {
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  div.row.bottom .text h3 {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 35px;
+  }
+}
+div.row.bottom .text p {
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  text-align: justify;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  div.row.bottom .text p {
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+#base {
+  background: url(../img/forme.png) no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #base {
+    background: url(../img/forme_640px.png) no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+  }
+}
+#base .up {
+  margin-bottom: 140px;
+}
+#base .up h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  color: #00529c;
+  margin-bottom: 40px;
+}
+#base .button-group {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  #base .button-group {
+    width: 75%;
+  }
+  #base .button-group span {
+    display: block;
+  }
+}
+#base .logo.grand {
+  position: relative;
+}
+#base .bottom {
+  padding-bottom: 30px;
+  margin-bottom: 22px;
+}
+section.index > .row {
   margin-top: 150px;
 }
 @media (max-width: 767px) {
-  section > .row {
+  section.index > .row {
     margin-top: 15px;
   }
 }
 @media (max-width: 767px) {
-  section .row:nth-child(3) {
+  section.index .row:nth-child(3) {
     text-align: center;
   }
 }
@@ -468,7 +572,8 @@ section > .row {
 }
 @media (max-width: 767px) {
   .button-group {
-    width: 47%;
+    text-align: center;
+    width: 50%;
     margin-top: 10px;
     margin-bottom: 25px;
     margin-left: auto;
@@ -482,13 +587,6 @@ section > .row {
   font-weight: 600;
   font-size: 16px;
   color: #555555;
-}
-@media (max-width: 767px) {
-  .button-group span {
-    text-align: center;
-    position: relative;
-    left: 55px;
-  }
 }
 #more {
   margin-left: 28%;
@@ -702,68 +800,6 @@ nav.textFooter {
   #background .bottom {
     text-align: center;
     top: 340px;
-  }
-}
-#background .bottom .text {
-  float: left;
-  position: absolute;
-  display: inline-block;
-  width: 440px;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  #background .bottom .text {
-    width: 400px;
-  }
-}
-@media (max-width: 767px) {
-  #background .bottom .text {
-    width: 100%;
-    display: block;
-    clear: both;
-  }
-}
-#background .bottom .text h2 {
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
-  font-size: 26px;
-  color: #ffffff;
-}
-#background .bottom .text h2 span {
-  font-weight: 300;
-}
-@media (max-width: 767px) {
-  #background .bottom .text h2 {
-    margin-top: 45px;
-  }
-}
-#background .bottom .text h3 {
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  color: #ffffff;
-}
-@media (max-width: 767px) {
-  #background .bottom .text h3 {
-    width: 70%;
-    margin: 0 auto;
-    padding-bottom: 35px;
-  }
-}
-#background .bottom .text p {
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
-  text-align: justify;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: #ffffff;
-}
-@media (max-width: 767px) {
-  #background .bottom .text p {
-    text-align: center;
-    width: 95%;
-    margin: 0 auto;
   }
 }
 #background .image {
