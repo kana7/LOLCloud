@@ -118,15 +118,10 @@ ul > li {
   top: 0;
   margin-top: 0px;
   margin-bottom: 0px;
+  padding-left: 0px;
   z-index: 10;
   width: 100%;
   display: none;
-  background-color: #ffffff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d0d0d0));
-  background: -webkit-linear-gradient(top, #ffffff, #d0d0d0);
-  background: -moz-linear-gradient(top, #ffffff, #d0d0d0);
-  background: -ms-linear-gradient(top, #ffffff, #d0d0d0);
-  background: -o-linear-gradient(top, #ffffff, #d0d0d0);
   list-style-type: none;
   min-height: 30px;
 }
@@ -134,8 +129,48 @@ ul > li {
   display: block;
 }
 #dropdown li {
+  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e9ecf3));
+  background: -webkit-linear-gradient(top, #ffffff, #e9ecf3);
+  background: -moz-linear-gradient(top, #ffffff, #e9ecf3);
+  background: -ms-linear-gradient(top, #ffffff, #e9ecf3);
+  background: -o-linear-gradient(top, #ffffff, #e9ecf3);
+  border-bottom: 2px solid rgba(0, 82, 156, 0.8) !important;
+  border-bottom: 2px solid #00529c;
+  padding-left: 40px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: block;
   margin-right: 0px;
+}
+#dropdown li a.link {
+  font-weight: 600;
+  font-size: 20px;
+}
+#dropdown li a.link span {
+  top: 4px;
+  position: relative;
+  float: right;
+  font-size: 18px;
+  font-weight: 600;
+}
+#dropdown li.active {
+  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+  background: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background: -o-linear-gradient(top, #ffffff, #ffffff);
+  border-bottom: 2px solid #00529c !important;
+  border-bottom: 2px solid #00529c;
+}
+#dropdown li.active a.link.bleu {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  pointer-events: none;
+  cursor: default;
 }
 footer {
   width: 100%;
@@ -167,6 +202,8 @@ footer ul li a.link.active {
   -webkit-opacity: 1 !important;
   -moz-opacity: 1 !important;
   opacity: 1 !important;
+  pointer-events: none;
+  cursor: default;
 }
 footer ul li a.link.gras {
   -webkit-opacity: 1 !important;
@@ -367,6 +404,12 @@ a.link.white:hover {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
+}
+a.link.bleu {
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+  color: #00529c;
 }
 @media (max-width: 767px) {
   .dossier {

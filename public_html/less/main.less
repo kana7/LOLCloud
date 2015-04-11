@@ -75,18 +75,46 @@ ul{
     top:0;
     margin-top: 0px;
     margin-bottom: 0px;
+    padding-left: 0px;
     z-index: 10;
     width: 100%;
     display: none;
-    .gradient(@blanc, @light-gris);
     list-style-type: none;
     min-height: 30px;
     &.open{
         display: block;
     }
     li{
+        .gradient(@blanc, #e9ecf3);
+        border-bottom: 2px solid rgba(0,82,156,0.8) !important;
+        border-bottom: 2px solid @bleu;
+        padding-left: 40px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         display: block;
         margin-right: 0px;
+        a.link{
+            font-weight: 600;
+            font-size: 20px;
+            span{
+                top:4px;
+                position: relative;
+                float: right;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+        &.active{
+            .gradient(@blanc, @blanc);
+            border-bottom: 2px solid rgba(0,82,156,1.0) !important;
+            border-bottom: 2px solid @bleu;
+            a.link.bleu{
+                .opacity(1.0);
+                pointer-events: none;
+                cursor: default;
+            }
+        }
     }
 }
 
@@ -114,6 +142,8 @@ footer{
                 &.active{
                     border-bottom: 1px solid @blanc;
                     .opacity(1.0) !important;
+                    pointer-events: none;
+                    cursor: default;
                 }
                 &.gras{
                     .opacity(1.0) !important;
@@ -268,6 +298,10 @@ a.link{
         &:hover{
             .opacity(1.0);
         }
+    }
+    &.bleu{
+        .opacity(0.8);
+        color:@bleu;
     }
 }
 
