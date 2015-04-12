@@ -81,38 +81,58 @@ ul{
     display: none;
     list-style-type: none;
     min-height: 30px;
+    border: 1px solid @light-gris;
     &.open{
         display: block;
     }
     li{
-        .gradient(@blanc, #e9ecf3);
-        border-bottom: 2px solid rgba(0,82,156,0.8) !important;
-        border-bottom: 2px solid @bleu;
-        padding-left: 40px;
-        padding-right: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        height: 49px;
+        background-color: @blanc;
+        border-bottom: 1px solid @light-gris;
         display: block;
         margin-right: 0px;
-        a.link{
-            font-weight: 600;
-            font-size: 20px;
-            span{
-                top:4px;
-                position: relative;
-                float: right;
-                font-size: 18px;
+        padding-right: 20px;
+        div.border-left{
+            height: 100%;
+            width:100%;
+            position:relative;
+            a.link.bleu{
+                position: absolute;
+                width: 90%;
+                @media @phone{
+                    width: 80%;
+                }
+                left:0;
+                top: 20%;
+                text-align: left;
+                margin-left: 40px;
                 font-weight: 600;
+                font-size: 20px;
+                .opacity(1.0) !important;
+                span{
+                    top:4px;
+                    position: relative;
+                    float: right;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
             }
         }
+
         &.active{
-            .gradient(@blanc, @blanc);
-            border-bottom: 2px solid rgba(0,82,156,1.0) !important;
-            border-bottom: 2px solid @bleu;
-            a.link.bleu{
-                .opacity(1.0);
-                pointer-events: none;
-                cursor: default;
+            div.border-left{
+                border-left: 6px solid @bleu;
+                a.link.bleu{
+                    pointer-events: none;
+                    cursor: default;
+                    span{
+                        top:4px;
+                        position: relative;
+                        float: right;
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
             }
         }
     }
@@ -358,16 +378,15 @@ div.row.bottom{
 }
 
 #base{
-    background: url(../img/forme.png) no-repeat;
-    background-size: cover;
+    background: url(../img/forme1.png) no-repeat;
+    background-size: 1920px auto;
     background-position: center bottom;
-    
-    @media @tablet{
+    padding-top: 20px;
+    @media @phone{
         background: url(../img/forme_640px.png) no-repeat;
-        background-size: cover;
+        background-size: 772px auto;
         background-position: center bottom;
     }
-    
     .up{
         margin-bottom: 140px;
         h2{
@@ -377,10 +396,10 @@ div.row.bottom{
     }
     .button-group{
         @media @phone{
-              width: 75%;
-              span{
-                  display: block;
-              }
+            width: 75%;
+            span{
+                display: block;
+            }
         }
         margin-top: 0px;
         margin-bottom: 0px;
@@ -388,9 +407,17 @@ div.row.bottom{
     }
     .logo.grand{
         position: relative;
+        @media @phone{
+            position:static;
+        }
     }
     .bottom{
         padding-bottom: 30px;
         margin-bottom: 22px;
+    }
+    .text{
+        @media @phone{
+            text-align:center;
+        }
     }
 }

@@ -18,7 +18,8 @@ $(function () {
     });
     
     $('#dropdown>li').on('click',function(){
-        var url = $(this).children().attr('href');
+        console.log($(this).children('a.link.bleu').prop("tagName"));
+        var url = $(this).children().children().attr('href');
         console.log(url);
         if(url != 'undefined') {
             window.location = url;

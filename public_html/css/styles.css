@@ -124,53 +124,62 @@ ul > li {
   display: none;
   list-style-type: none;
   min-height: 30px;
+  border: 1px solid #d0d0d0;
 }
 #dropdown.open {
   display: block;
 }
 #dropdown li {
+  height: 49px;
   background-color: #ffffff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e9ecf3));
-  background: -webkit-linear-gradient(top, #ffffff, #e9ecf3);
-  background: -moz-linear-gradient(top, #ffffff, #e9ecf3);
-  background: -ms-linear-gradient(top, #ffffff, #e9ecf3);
-  background: -o-linear-gradient(top, #ffffff, #e9ecf3);
-  border-bottom: 2px solid rgba(0, 82, 156, 0.8) !important;
-  border-bottom: 2px solid #00529c;
-  padding-left: 40px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  border-bottom: 1px solid #d0d0d0;
   display: block;
   margin-right: 0px;
+  padding-right: 20px;
 }
-#dropdown li a.link {
+#dropdown li div.border-left {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#dropdown li div.border-left a.link.bleu {
+  position: absolute;
+  width: 90%;
+  left: 0;
+  top: 20%;
+  text-align: left;
+  margin-left: 40px;
   font-weight: 600;
   font-size: 20px;
+  -webkit-opacity: 1 !important;
+  -moz-opacity: 1 !important;
+  opacity: 1 !important;
 }
-#dropdown li a.link span {
+@media (max-width: 767px) {
+  #dropdown li div.border-left a.link.bleu {
+    width: 80%;
+  }
+}
+#dropdown li div.border-left a.link.bleu span {
   top: 4px;
   position: relative;
   float: right;
   font-size: 18px;
   font-weight: 600;
 }
-#dropdown li.active {
-  background-color: #ffffff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
-  background: -webkit-linear-gradient(top, #ffffff, #ffffff);
-  background: -moz-linear-gradient(top, #ffffff, #ffffff);
-  background: -ms-linear-gradient(top, #ffffff, #ffffff);
-  background: -o-linear-gradient(top, #ffffff, #ffffff);
-  border-bottom: 2px solid #00529c !important;
-  border-bottom: 2px solid #00529c;
+#dropdown li.active div.border-left {
+  border-left: 6px solid #00529c;
 }
-#dropdown li.active a.link.bleu {
-  -webkit-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
+#dropdown li.active div.border-left a.link.bleu {
   pointer-events: none;
   cursor: default;
+}
+#dropdown li.active div.border-left a.link.bleu span {
+  top: 4px;
+  position: relative;
+  float: right;
+  font-size: 18px;
+  font-weight: 600;
 }
 footer {
   width: 100%;
@@ -480,14 +489,15 @@ div.row.bottom .text p {
   }
 }
 #base {
-  background: url(../img/forme.png) no-repeat;
-  background-size: cover;
+  background: url(../img/forme1.png) no-repeat;
+  background-size: 1920px auto;
   background-position: center bottom;
+  padding-top: 20px;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 767px) {
   #base {
     background: url(../img/forme_640px.png) no-repeat;
-    background-size: cover;
+    background-size: 772px auto;
     background-position: center bottom;
   }
 }
@@ -517,9 +527,19 @@ div.row.bottom .text p {
 #base .logo.grand {
   position: relative;
 }
+@media (max-width: 767px) {
+  #base .logo.grand {
+    position: static;
+  }
+}
 #base .bottom {
   padding-bottom: 30px;
   margin-bottom: 22px;
+}
+@media (max-width: 767px) {
+  #base .text {
+    text-align: center;
+  }
 }
 section.index > .row {
   margin-top: 150px;
@@ -532,6 +552,11 @@ section.index > .row {
 @media (max-width: 767px) {
   section.index .row:nth-child(3) {
     text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  #dropdown a.link.bleu {
+    font-size: 19px !important;
   }
 }
 #mockup {
@@ -692,9 +717,9 @@ nav.textFooter {
 }
 @media (max-width: 767px) {
   #background {
-    height: 1200px;
-    background: url(../img/Homepage/LOL_Cloud_Details_Homepage_320px.png) no-repeat;
-    background-size: 100% 800px;
+    height: 1230px;
+    background: url(../img/Homepage/LOL_Cloud_Details_Homepage_320px_1.png) no-repeat;
+    background-size: 772px auto;
     background-position: center bottom;
   }
 }
@@ -799,7 +824,7 @@ nav.textFooter {
 @media (max-width: 767px) {
   #background .bottom {
     text-align: center;
-    top: 340px;
+    top: 356px;
   }
 }
 #background .image {
