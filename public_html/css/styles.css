@@ -557,7 +557,7 @@ div.row.bottom .text p {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #info div.right.col-sm-7.champ {
-    width: 61%;
+    width: 63%;
   }
 }
 #info div.left div.title {
@@ -570,7 +570,7 @@ div.row.bottom .text p {
   font-size: 35px;
   color: #00529c;
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 @media (max-width: 767px) {
   #info div.left div.title h1 {
@@ -710,6 +710,12 @@ div.row.bottom .text p {
 #contact .logo {
   position: relative;
   top: 30px;
+}
+.radio label {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #555555;
 }
 section.index > .row {
   margin-top: 150px;
