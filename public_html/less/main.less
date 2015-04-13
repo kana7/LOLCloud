@@ -378,6 +378,7 @@ div.row.bottom{
 }
 
 #base{
+    .drop-shadow(0px, -2px, 15px, 0, 0.2);
     background: url(../img/forme1.png) no-repeat;
     background-size: 1920px auto;
     background-position: center bottom;
@@ -419,5 +420,149 @@ div.row.bottom{
         @media @phone{
             text-align:center;
         }
+    }
+}
+
+#info{
+    position: relative;
+    margin-top: 50px;
+    @media @phone{
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    margin-bottom: 100px;
+    @media @tablet{
+        div.right.col-sm-7.champ{
+            width: 61%;
+        }
+    }
+    div.left{
+        div.title{
+            h1{
+                line-height: 26px;
+                .regular(@size-heading1,@bleu);
+                margin-top: 0px;
+                margin-bottom: 10px;
+                @media @phone{
+                    display: inline-block;
+                    width:50%;
+                    position:relative;
+                    top:20px;
+                }
+            }
+            div.dossier{
+                width: 243px;
+                height: auto;
+                position:relative;
+                right: 33px;
+                @media @phone{
+                    width: 139px;
+                    height: 139px;
+                    display: inline-block;
+                    left: 34px;
+                    top: 10px;
+                }
+
+                img{
+                    width: 100%;
+                    height:auto;
+                }
+            }
+            margin-bottom: 30px;
+        }
+    }
+    h3.heading3{
+        .semiBold(@size-text, @bleu);
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    p.text{
+        line-height: 20px;
+        margin-top: 0px;
+        text-align: justify;
+        .light(@size-text,@gris);
+        a.link.bleu{
+            font-weight: 300;
+            text-decoration: underline;
+        }
+    }
+
+    aside.document{
+        h3{
+            .semiBold(@size-text, @bleu);
+            margin-top: 0px;
+            margin-bottom: 5px;
+        }
+        ul{
+            margin-top: 0px;
+            padding-left:0px;
+            li{
+                .light(@size-text,@gris);
+                display: block;
+                margin-bottom: 3px;
+                margin-right: 0px;
+                a{
+                    img{
+                        position: relative;
+                        bottom: 2px;
+                        margin-right: 10px;
+
+                    }
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+.form-group{
+    .light(@size-text, @gris);
+    label{
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+    .form-control{
+        width: 100%;
+        @media @desktop{
+            width: 93%;            
+        }
+        &.ligne{
+            width: 100%;
+        }
+    }
+    &.right{
+        position: relative;
+        @media @desktop{
+            left: 23px;
+        }
+    }
+    textarea{
+        width: 609px;
+        height: 181px;
+        resize: none;
+        @media @tablet{
+            width: 379px;
+        }
+        @media @phone{
+            width: 299px;
+        }
+    }
+}
+.submit{
+    text-align:left;
+    @media @desktop{
+        text-align:right;
+    }
+    input{
+        margin-top: 10px;
+    }
+}
+
+#contact{
+    margin-top:60px;
+    .logo{
+        position: relative;
+        top: 30px;
     }
 }

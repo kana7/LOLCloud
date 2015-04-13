@@ -117,15 +117,104 @@
                 </div>
             </header>
         </div>
-
-        <section id="formulaire">
+        <section id="info">
             <div class="container">
-                <aside>
-
-                </aside>
-                <article>
-
-                </article>
+                <div class="row">
+                    <div class="left col-sm-4 col-md-3">
+                        <div class="title">
+                            <h1>Contact:</h1>
+                            <div class="dossier">
+                                <img src="img/Contact/Icones_CONTACT.png"/>
+                            </div>
+                        </div>
+                        <aside class="hidden-xs document">
+                            <h3>DOCUMENTS:</h3>
+                            <ul>
+                                <li><a href="#"><img src="img/pdf_icone.png" alt="pdf"/>Contrat LOL CLOUD</a></li>
+                                <li><a href="#"><img src="img/pdf_icone.png" alt="pdf"/>Conditions particulières</a></li>
+                                <li><a href="#"><img src="img/pdf_icone.png" alt="pdf"/>Conditions générales</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="right pull-right col-xs-12 col-sm-7 col-md-8 champ">
+                        <p class="text">
+                            Pour toutes questions, informations ou simple demandes sur nos produits, n'hésitez pas à nous contacter par téléphone, par email ou via le formulaire ci-dessous.
+                        </p>
+                        <div style="margin-bottom: 41px; margin-top: 30px;">
+                            <h3 class="heading3">
+                                NOUS CONTACTER:
+                            </h3>
+                            <p class="text" style="line-height: 27px;">
+                                <strong>Téléphone : </strong>2799 0000<br/>
+                                <strong>Email : </strong>info@internet.lu<br/>
+                                <strong>Courrier : </strong>3, avenue de la Porte-Neuve <span class="hidden-xs">| L-2227 Luxembourg</span>
+                                <span style="position: relative; left: 69px;" class="visible-xs-block">L-2227 Luxembourg</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="heading3">
+                                NOUS ENVOYER UN MESSAGE:
+                            </h3>
+                            <form method="GET" enctype="text/plain" action="/Scripts/sql.exe" autocomplete="off" onsubmit="alert('Thank you for completing this form. \n We will contact you as soon as possible.');
+                                    document.location.href = '#';">
+                                <div class="form-group col-md-6 col-sm-12">
+                                    <label for="nom">Nom complet*</label>
+                                    <input type="text" class="form-control" id="nom" name="nom"/>
+                                </div>
+                                <div class="form-group right col-md-6 col-sm-12">
+                                    <label for="Société">Société</label>
+                                    <input type="text" class="form-control" id="Société" name="Société"/>
+                                </div>
+                                <div class="form-group col-md-6 col-sm-12">
+                                    <label for="mail">Adresse email*</label>
+                                    <input type="email" class="form-control" id="mail" name="mail"/>
+                                </div>
+                                <div class="form-group right col-md-6 col-sm-12">
+                                    <label for="tel">Numéro de téléphone</label>
+                                    <input type="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" class="form-control" id="tel" name="tel"/>
+                                </div>
+                                <div class="form-group col-xs-12">
+                                    <label for="objet">Sujet de votre message*</label>
+                                    <input type="text" class="form-control ligne" id="objet" name="objet"/>
+                                </div>
+                                <div class="form-group col-xs-12">
+                                    <label for="objet">Sujet de votre message*</label>
+                                    <textarea type="text" class="form-control ligne" id="objet" name="objet"></textarea>
+                                </div>
+                                <div class="submit">
+                                    <input class="button primary" type="submit" value="Envoyer le message">
+                                </div>
+                            </form>
+                        </div>
+                        <div id="contact">
+                            <div class="pull-left col-xs-12 visible-xs-block visible-sm-block" style="margin-bottom: 30px;">
+                                <img src="img/Contact/Logo_LOL.jpg"/>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <h3 class="heading3">LUXEMBOURG ONLINE</h3>
+                                <p class="text" style="line-height: 27px;  margin-bottom: 4px;">
+                                    <strong>Administration: </strong>14, Av. du X Septembre<br/>
+                                    <span style="position: relative; left: 113px;">L-2550 Luxembourg</span>
+                                </p>
+                                <p class="text" style="line-height: 27px; margin-bottom: 0px;">
+                                    <strong>No. de fax: </strong>2799 3555 (Commercial)<br/>
+                                    <span style="position: relative; left: 78px;">45 93 34 (Comptabilité)</span>
+                                </p>
+                            </div>
+                            <div class="pull-right col-md-4 logo visible-md visible-lg">
+                                <img src="img/Contact/Logo_LOL.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="visible-xs col-xs-12 document" style="margin-top: 30px;">
+                        <h3>DOCUMENTS:</h3>
+                        <ul>
+                            <li><a href="#"><img src="img/pdf_icone.png" alt="pdf"/>Contrat LOL CLOUD</a></li>
+                            <li><a href="#"><img src="img/pdf_icone.png" alt="pdf"/>Conditions particulières</a></li>
+                            <li><a href="#"><img src="img/pdf_icone.png" alt="pdf"/>Conditions générales</a></li>
+                        </ul>
+                    </aside>
+                </div>
             </div>
         </section>
         <section id="base">

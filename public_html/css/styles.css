@@ -489,6 +489,9 @@ div.row.bottom .text p {
   }
 }
 #base {
+  -webkit-box-shadow: 0px -2px 15px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px -2px 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -2px 15px 0 rgba(0, 0, 0, 0.2);
   background: url(../img/forme1.png) no-repeat;
   background-size: 1920px auto;
   background-position: center bottom;
@@ -540,6 +543,173 @@ div.row.bottom .text p {
   #base .text {
     text-align: center;
   }
+}
+#info {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+@media (max-width: 767px) {
+  #info {
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #info div.right.col-sm-7.champ {
+    width: 61%;
+  }
+}
+#info div.left div.title {
+  margin-bottom: 30px;
+}
+#info div.left div.title h1 {
+  line-height: 26px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  color: #00529c;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  #info div.left div.title h1 {
+    display: inline-block;
+    width: 50%;
+    position: relative;
+    top: 20px;
+  }
+}
+#info div.left div.title div.dossier {
+  width: 243px;
+  height: auto;
+  position: relative;
+  right: 33px;
+}
+@media (max-width: 767px) {
+  #info div.left div.title div.dossier {
+    width: 139px;
+    height: 139px;
+    display: inline-block;
+    left: 34px;
+    top: 10px;
+  }
+}
+#info div.left div.title div.dossier img {
+  width: 100%;
+  height: auto;
+}
+#info h3.heading3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #00529c;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+#info p.text {
+  line-height: 20px;
+  margin-top: 0px;
+  text-align: justify;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #555555;
+}
+#info p.text a.link.bleu {
+  font-weight: 300;
+  text-decoration: underline;
+}
+#info aside.document h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #00529c;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+#info aside.document ul {
+  margin-top: 0px;
+  padding-left: 0px;
+}
+#info aside.document ul li {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #555555;
+  display: block;
+  margin-bottom: 3px;
+  margin-right: 0px;
+}
+#info aside.document ul li a img {
+  position: relative;
+  bottom: 2px;
+  margin-right: 10px;
+}
+#info aside.document ul li a:hover {
+  text-decoration: underline;
+}
+.form-group {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #555555;
+}
+.form-group label {
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.form-group .form-control {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .form-group .form-control {
+    width: 93%;
+  }
+}
+.form-group .form-control.ligne {
+  width: 100%;
+}
+.form-group.right {
+  position: relative;
+}
+@media (min-width: 992px) {
+  .form-group.right {
+    left: 23px;
+  }
+}
+.form-group textarea {
+  width: 609px;
+  height: 181px;
+  resize: none;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-group textarea {
+    width: 379px;
+  }
+}
+@media (max-width: 767px) {
+  .form-group textarea {
+    width: 299px;
+  }
+}
+.submit {
+  text-align: left;
+}
+@media (min-width: 992px) {
+  .submit {
+    text-align: right;
+  }
+}
+.submit input {
+  margin-top: 10px;
+}
+#contact {
+  margin-top: 60px;
+}
+#contact .logo {
+  position: relative;
+  top: 30px;
 }
 section.index > .row {
   margin-top: 150px;
