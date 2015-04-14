@@ -2,7 +2,7 @@
 			$(".guide").hide();
 			
 			var _hash=window.location.hash.substr(1);
-			$("#lolCloudGuides tr").eq(_hash).fadeIn();
+			$("#lolCloudGuides div").eq(_hash).fadeIn();
 			$(".addArrow a").click(function(){
 				var url = $(this).attr("href");
 				window.location.href=url;

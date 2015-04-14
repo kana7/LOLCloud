@@ -33,7 +33,7 @@ a {
 ul{
     list-style-type: none;
     &>li{
-        display: inline;
+        display: inline-block;
         margin-right: 35px;
     }
 }
@@ -486,6 +486,19 @@ div.row.bottom{
             text-decoration: underline;
         }
     }
+    ol.text{
+        padding-left: 19px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+        .light(@size-text, @gris);
+        li{
+            margin-bottom: 7px;
+        }
+        a.link.bleu{
+            font-weight: 300;
+            text-decoration: underline;
+        }
+    }
 
     aside.document{
         h3{
@@ -569,5 +582,52 @@ div.row.bottom{
 .radio{
     label{
         .light(@size-text, @gris);
+    }
+}
+.icons{
+    margin:0;
+    li{
+        padding-bottom: 10px;
+        margin-right:60px;
+        @media @tablet{
+            margin-right: 19px;
+        }
+        @media @phone{
+            margin-right: 9px;
+        }
+        .support{
+
+            height: 84px;
+            width: auto;
+            @media @tablet{
+                height: 76px;
+            }
+            @media @phone{
+                height: 70px;
+            }
+        }  
+        &.lolCloudIconsActive{
+            border-bottom: 4px solid #00529C;
+        }
+    }
+}
+
+.thumb{
+    margin:0px;
+    padding:0px;
+    li{
+        margin-right: 0px;
+    }
+    img{
+        @media @desktop{
+            width: 110px;
+        }
+        @media @tablet{
+            width: 88px;
+        }
+        @media @phone{
+            width: 67px;
+        }
+        height: auto;
     }
 }
