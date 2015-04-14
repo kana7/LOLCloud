@@ -149,7 +149,7 @@ ul > li {
   top: 20%;
   text-align: left;
   margin-left: 40px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 20px;
   -webkit-opacity: 1 !important;
   -moz-opacity: 1 !important;
@@ -938,6 +938,12 @@ nav.textFooter {
 #background .middle {
   top: 40px;
   position: relative;
+}
+@media (min-width: 992px) {
+  #background .middle {
+    width: 82%;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 767px) {
   #background .middle {

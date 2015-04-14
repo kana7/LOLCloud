@@ -56,11 +56,15 @@ $(function () {
             window.location = url;
         }
     });
+    
+    /*
     $(window).scroll(function () {
         console.log($(window).scrollTop());
     });
+    
     console.log(viewport().width);
     if (viewport().width>992){
          $('#info div.left').followTo($('#base').offset().top);
     }
+    */
 });
