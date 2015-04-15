@@ -21,7 +21,7 @@
                 <div class="container" style="height: 100%;">
                     <div class="row" >
                         <div class="logo petit" style="margin-top: 13px;">
-                            <img src="img/Logo_LOL_CLOUD.png" alt="logo-header"/>
+                            <a href="index.html"><img src="img/Logo_LOL_CLOUD.png" alt="logo-header"/></a>
                         </div>
                         <nav class="navigation contenue col-sm-4 col-md-9 hidden-xs">
                             <ul class="col-md-7 hidden-sm">
@@ -50,7 +50,7 @@
                                 <li style="margin-right: 5px;">
                                     <a href="inscription.html" class="link white active">S'inscrire</a>
                                 </li>
-                                <li style="margin-right: 5px;">l</li>
+                                <li class="semi-opac" style="margin-right: 5px;">l</li>
                                 <li>
                                     <a href="http://lolcloud.internet.lu/" class="link white">Se connecter</a>
                                 </li>
@@ -122,13 +122,13 @@
                 <div class="row">
                     <div class="left col-sm-4 col-md-3">
                         <div class="title">
-                            <h1>Inscription:</h1>
+                            <h1>Inscription :</h1>
                             <div class="dossier">
                                 <img src="img/Inscription/Icones_INSCRIPTION.png"/>
                             </div>
                         </div>
                         <aside class="hidden-xs document">
-                            <h3>DOCUMENTS:</h3>
+                            <h3>DOCUMENTS :</h3>
                             <ul>
                                 <li><a href="pdf/LOLCLOUD_FREE_FR.pdf"><img src="img/pdf_icone.png" alt="pdf"/>Contrat LOL CLOUD</a></li>
                                 <li><a href="pdf/CONDITIONS PARTICULIERES DU SERVICE LOLCLOUD.pdf"><img src="img/pdf_icone.png" alt="pdf"/>Conditions particulières</a></li>
@@ -138,14 +138,15 @@
                     </div>
                     <div class="right pull-right col-xs-12 col-sm-7 col-md-8 champ">
                         <p class="text">
-                            Vous avez choisi la solution LOL CLOUD suivante:<br/>
+                            Vous avez choisi la solution LOL CLOUD suivante : <br/>
                         </p>
                         <p class="text">
                             <img src="img/Inscription/LOL_CLOUD_Free.png" alt="free"/><span style="position: relative; top: 2px; left: 25px;">(5GB/gratuit)</span>
                         </p>
                         <div style="margin-top: 55px;">
-                            <form method="GET" enctype="text/plain" action="/Scripts/sql.exe" autocomplete="off" onsubmit="alert('Thank you for completing this form. \n We will contact you as soon as possible.');
-                                    document.location.href = '#';">
+                            <form name="frmContact" id="frmContact" method="POST" action="/Scripts/sql.exe">
+<input type="hidden" name="Sql" value="lolcloud_mailsend.uhs">
+												<input type="hidden" name="SqlDB" value="LOLPublic">
                                 <div class="form-group col-md-6 col-sm-12">
                                     <label for="nom">Nom*</label>
                                     <input type="text" class="form-control" id="nom" name="nom" required/>
@@ -201,11 +202,83 @@
                                 </div>
                             </form>
                             <p class="text col-xs-12" style="line-height: 25px; margin-top: 30px;">
-                                Votre demande sera traitée endéans les 24 heures qui suivent:<br/>
+                                Votre demande sera traitée endéans les 24 heures qui suivent :<br/>
                                 (*champs obligatoires)
                             </p>
                         </div>
                     </div>
+
+<script>
+								$(function(){
+									
+									$(".topMenuEntryText").each(function(){
+										$("#level_1").append("<option data-txt='"+$(this).text()+"' value='"+$(this).text()+"'>"+$(this).text()+"</option>");
+									});
+									$("#level_1").change(function(){
+										loadCb();
+									});
+									
+									var hash_val=[];
+									var hash = window.location.hash;
+									if(hash.length>3){
+										hash = hash.substr(hash.indexOf('#')+1).split("&");
+
+										for(i in hash){	
+											hash_val[hash[i].split("=")[0]]=hash[i].split("=")[1];
+										}
+										$("option[data-txt='"+hash_val["category"]+"']").prop("selected",true);
+										$("#level_1").change();
+									}
+									
+									loadCb();
+									
+									if(window.location.hash.length>3){
+										$("#level_2 option").each(function(){
+											if($(this).attr("data-link")==hash_val["sub_category"]){
+												$(this).prop("selected",true);
+											}
+										})
+									}
+									$("#send").click(function(){
+										$("#frmContact").submit();
+									});
+
+								})
+								function getIp(){
+									if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
+									else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+									xmlhttp.open("GET","http://api.hostip.info/get_html.php",false);
+									xmlhttp.send();
+
+									hostipInfo = xmlhttp.responseText.split("\n");
+
+									for (i=0; hostipInfo.length >= i; i++) {
+										ipAddress = hostipInfo[i].split(":");
+										if ( ipAddress[0] == "IP" ){
+											document.getElementById("ip_adress").value = ipAddress[1];
+										}
+									}
+								}
+								
+								function loadCb(){
+									$("#level_2").html("");
+									$(".topMenuEntrySub[data-link='"+$("#level_1").val()+"']").find(".subMenuLink").each(function(i,val){
+										if(($(this).attr("href")=="cloud_bluerh.html" || $(this).attr("href")=="cloud_bluetickets.html" || $(this).attr("href")=="cloud_blueerp.html") && i==0){//temporary fix
+											$("#level_2").append("<option data-link='cloud_blue.html' value='Blue Chameleon'>Blue Chameleon</option>");
+										}else if( $(this).attr("href")!="cloud_bluetickets.html" && $(this).attr("href")!="cloud_blueerp.html"){
+											$("#level_2").append("<option data-link='"+$(this).attr("href")+"' value='"+$(this).text()+"'>"+$(this).text()+"</option>");
+										}
+										
+									});
+									
+									if($("#level_2 option").length<1){
+										
+										$("#level_2").append("<option value='Tous'>[Tous les Services]</option>");
+									}
+									$("#level_2").show();
+								}
+							</script>
                     <aside class="visible-xs col-xs-12 document" style="margin-top: 30px;">
                         <h3>DOCUMENTS:</h3>
                         <ul>
@@ -224,9 +297,9 @@
                         <h2>Synchronisez vos fichiers où vous voulez :</h2>
                     </div>
                     <div class="row button-group">
-                        <button class="button primary"><a href="#">Essayer gratuitement</a></button>
+                        <a href="inscription.html"><button class="button primary">Essayer gratuitement</button></a>
                         <span class="semi-opac">ou</span>
-                        <button class="button default"><a href="http://lolcloud.internet.lu/">Se connecter</a></button>
+                        <a href="http://lolcloud.internet.lu/"><button class="button default">Se connecter</button></a>
                     </div>
                 </div>
                 <div class="bottom row">
@@ -257,23 +330,23 @@
                                 <li>
                                     <a href="home.html" class="link white">Accueil</a>
                                 </li>
-                                <li>l</li>
+                                <li class="semi-opac">l</li>
                                 <li>
                                     <a href="details.html" class="link white">Détails</a>
                                 </li>
-                                <li>l</li>
+                                <li class="semi-opac">l</li>
                                 <li>
                                     <a href="aide.html" class="link white">Aide</a>
                                 </li>
-                                <li>l</li>
+                                <li class="semi-opac">l</li>
                                 <li>
                                     <a href="contact.html" class="link white">Contact</a>
                                 </li>
-                                <li>l</li>
+                                <li class="semi-opac">l</li>
                                 <li>
                                     <a class="link white  active gras" href="inscription.html">S'inscrire</a>
                                 </li>
-                                <li>l</li>
+                                <li class="semi-opac">l</li>
                                 <li>
                                     <a class="link white gras" href="http://lolcloud.internet.lu/">Se connecter</a>
                                 </li>

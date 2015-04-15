@@ -44,6 +44,7 @@ html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  height: 100%;
 }
 footer,
 header {
@@ -84,6 +85,9 @@ ul > li {
   font-weight: 400;
   font-size: 16px;
   color: #ffffff;
+}
+.navigation a:hover {
+  opacity: 1.0;
 }
 .navigation > ul {
   margin: 0;
@@ -184,9 +188,16 @@ ul > li {
 footer {
   width: 100%;
   position: absolute;
+  bottom: 0;
   left: 0;
   padding-left: 0px !important;
   padding-right: 0px !important;
+}
+@media (max-width: 767px) {
+  footer.index {
+    position: relative;
+    margin-top: 25px;
+  }
 }
 footer.contenue {
   position: initial;
@@ -403,6 +414,12 @@ a.link.white {
   opacity: 0.5;
   color: #ffffff;
 }
+a.link.white.solid {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  font-weight: 600;
+}
 a.link.white.active {
   -webkit-opacity: 1;
   -moz-opacity: 1;
@@ -567,7 +584,7 @@ div.row.bottom .text p {
   line-height: 26px;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
-  font-size: 35px;
+  font-size: 32px;
   color: #00529c;
   margin-top: 0px;
   margin-bottom: 50px;
@@ -619,6 +636,12 @@ div.row.bottom .text p {
 #info p.text a.link.bleu {
   font-weight: 300;
   text-decoration: underline;
+}
+#info p.text.confirm {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #00529c;
 }
 #info ol.text {
   padding-left: 19px;
@@ -720,9 +743,6 @@ div.row.bottom .text p {
 .submit input {
   margin-top: 10px;
 }
-#contact {
-  margin-top: 60px;
-}
 #contact .logo {
   position: relative;
   top: 30px;
@@ -780,10 +800,30 @@ div.row.bottom .text p {
   border-radius: 10px;
 }
 .col-divide-7 {
-  width: 13.21%;
+  width: 13.75259%;
+}
+@media (max-width: 767px) {
+  .col-divide-7 {
+    width: 13.218%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-divide-7 {
+    width: 13.370%;
+  }
 }
 .col-divide-5 {
-  width: 19%;
+  width: 19.502%;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-divide-5 {
+    width: 19.147%;
+  }
+}
+@media (max-width: 767px) {
+  .col-divide-5 {
+    width: 19.00%;
+  }
 }
 section.index > .row {
   margin-top: 150px;
@@ -858,7 +898,12 @@ section.index > .row {
   color: #555555;
 }
 #more {
-  margin-left: 28%;
+  margin-left: 23%;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #more {
+    margin-left: 25%;
+  }
 }
 @media (max-width: 767px) {
   #more {

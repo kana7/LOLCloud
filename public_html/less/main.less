@@ -1,6 +1,7 @@
 body,html{
     margin: 0; padding: 0;
     overflow-x: hidden;
+    height: 100%;
 }
 
 footer, header{
@@ -44,6 +45,9 @@ ul{
     top: 22px;
     float: right;
     .regular(@size-text, @blanc);
+    a:hover{
+        opacity: 1.0;
+    }
     &>ul{
         margin: 0;
     }
@@ -141,11 +145,17 @@ ul{
 footer{
     width: 100%;
     position: absolute;
-    //bottom: 0px;
+    bottom: 0;
     left: 0;
     padding-left: 0px !important;
     padding-right: 0px !important;
     //.inner-shadow( 0, -10px, 20px, 0, 0.3) !important;
+    &.index{
+        @media @phone{
+            position: relative;
+            margin-top: 25px;
+        }
+    }
     &.contenue{
         position: initial;
     }
@@ -310,6 +320,10 @@ a.link{
     &.white{
         .opacity(0.5);
         color:@blanc;
+        &.solid{
+            .opacity(1.0);
+            font-weight: 600;
+        }
         &.active{
             .opacity(1.0);
             pointer-events: none;
@@ -440,7 +454,7 @@ div.row.bottom{
         div.title{
             h1{
                 line-height: 26px;
-                .regular(@size-heading1,@bleu);
+                .regular(32px,@bleu);
                 margin-top: 0px;
                 margin-bottom: 50px;
                 @media @phone{
@@ -484,6 +498,9 @@ div.row.bottom{
         a.link.bleu{
             font-weight: 300;
             text-decoration: underline;
+        }
+        &.confirm{
+            .regular(20px, @bleu);
         }
     }
     ol.text{
@@ -573,7 +590,6 @@ div.row.bottom{
 }
 
 #contact{
-    margin-top:60px;
     .logo{
         position: relative;
         top: 30px;
@@ -626,9 +642,21 @@ div.row.bottom{
 }
 
 .col-divide-7{
-    width: 13.21%;
+    width: 13.75259%;
+    @media @phone{
+        width: 13.218%;    
+    }
+    @media @tablet{
+        width: 13.370%;    
+    }
 }
 
 .col-divide-5{
-      width: 19%;
+    width: 19.502%;    
+    @media @tablet{
+        width: 19.147%;  
+    }
+    @media @phone{
+        width: 19.00%;  
+    }
 }
