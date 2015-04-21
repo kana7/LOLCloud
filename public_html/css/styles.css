@@ -959,23 +959,23 @@ nav.textFooter {
   }
 }
 #slider div {
-  line-height: 40px;
+  line-height: 50px;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 40px;
   color: #ffffff;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #slider div {
-    line-height: 30px;
-    font-size: 23px;
+    line-height: 40px;
+    font-size: 33px;
     font-weight: 600;
   }
 }
 @media (max-width: 767px) {
   #slider div {
-    line-height: 30px;
-    font-size: 23px;
+    line-height: 36px;
+    font-size: 26px;
     font-weight: 600;
   }
 }
