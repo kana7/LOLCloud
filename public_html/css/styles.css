@@ -161,8 +161,13 @@ ul > li {
 }
 @media (max-width: 767px) {
   #dropdown li div.border-left a.link.bleu {
-    width: 94%;
-    margin-left: 16px;
+    width: 80%;
+  }
+}
+@media (max-width: 399px) {
+  #dropdown li div.border-left a.link.bleu {
+    width: 95% !important;
+    margin-left: 15px !important;
   }
 }
 #dropdown li div.border-left a.link.bleu span {
@@ -539,7 +544,7 @@ div.row.bottom .text p {
 }
 @media (max-width: 767px) {
   #base .button-group {
-    width: 75%;
+    width: 210px;
   }
   #base .button-group span {
     display: block;
@@ -596,6 +601,11 @@ div.row.bottom .text p {
     width: 50%;
     position: relative;
     top: 20px;
+  }
+}
+@media (max-width: 399px) {
+  #info div.left div.title h1 {
+    font-size: 26px !important;
   }
 }
 #info div.left div.title div.dossier {
@@ -853,6 +863,11 @@ section.index > .row {
     top: 75px;
   }
 }
+@media (max-width: 399px) {
+  #mockup {
+    text-align: center;
+  }
+}
 #mockup img {
   height: auto;
 }
@@ -883,7 +898,7 @@ section.index > .row {
 @media (max-width: 767px) {
   .button-group {
     text-align: center;
-    width: 50%;
+    width: 170px;
     margin-top: 10px;
     margin-bottom: 25px;
     margin-left: auto;
