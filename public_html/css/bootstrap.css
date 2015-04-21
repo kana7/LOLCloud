@@ -431,7 +431,18 @@ pre code {
 }
 @media (max-width: 767px) {
     .container {
+        width: auto;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
+@media (max-width: 767px) and (orientation: landscape) {
+    .container {
         width: 320px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 @media (min-width: 768px) {

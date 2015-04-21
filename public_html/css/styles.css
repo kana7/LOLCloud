@@ -161,7 +161,8 @@ ul > li {
 }
 @media (max-width: 767px) {
   #dropdown li div.border-left a.link.bleu {
-    width: 80%;
+    width: 94%;
+    margin-left: 16px;
   }
 }
 #dropdown li div.border-left a.link.bleu span {
