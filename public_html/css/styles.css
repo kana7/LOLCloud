@@ -758,6 +758,11 @@ div.row.bottom .text p {
   position: relative;
   top: 30px;
 }
+@media (max-width: 767px) {
+  #contact .logo {
+    margin-bottom: 50px;
+  }
+}
 .radio label {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
