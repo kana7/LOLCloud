@@ -88,6 +88,12 @@
         </footer>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/detectAndroid.js"></script>
+        <script type="text/javascript">
+                var ua = navigator.userAgent.toLowerCase();
+                var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+                if (!isAndroid) {
+                    $('#drop>a,#android1').hide();
+                }
+        </script>
     </body>
 </html>

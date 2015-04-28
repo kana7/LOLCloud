@@ -982,6 +982,8 @@ nav.textFooter {
     line-height: 36px;
     font-size: 26px;
     font-weight: 600;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 #slider div span {
