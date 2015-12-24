@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>LOLCLOUD - S'inscrire</title>
+        <title>LOLCloud - Inscription</title>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="Créez votre compte personnel LOL Cloud pour stocker et partager vos documents en tout sécurité. Luxembourg Online vous offre 5GB gratuits!"/>
+        <meta name="keywords" content="Service Cloud, solution Cloud, service de stockage en ligne, stockage de données en ligne, partage de fichiers, sauvegarde en ligne, LOL Cloud"/>
+        <link rel="alternate" hreflang="fr" href="http://www.internet.lu/lolcloud/inscription.html" />
         <link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
         <link href="css/styles.css" type="text/css" rel="stylesheet"/>
-        <link href="https://fontastic.s3.amazonaws.com/7Lk7oZi2gTuyXPswkuacSb/icons.css" rel="stylesheet">
+        <script type="text/javascript" src="js/jquery.js"></script>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -21,28 +24,28 @@
                 <div class="container" style="height: 100%;">
                     <div class="row" >
                         <div class="logo petit" style="margin-top: 13px;">
-                            <a href="index.html"><img src="img/Logo_LOL_CLOUD.png" alt="logo-header"/></a>
+                            <a href="index.html"><img src="img/Logo_LOL_CLOUD.png" alt="Logo LOL Cloud"/></a>
                         </div>
                         <nav class="navigation contenue col-sm-4 col-md-9 hidden-xs">
                             <ul class="col-md-7 hidden-sm">
                                 <li>
                                     <a href="home.html" class="link white">
-                                        Accueil<span class="icon-fleche header"></span>
+                                        Accueil<span class="icon-right-arrow header"></span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="details.html" class="link white">
-                                        Détails<span class="icon-fleche header"></span>
+                                        Détails<span class="icon-right-arrow header"></span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="aide.html" class="link white">
-                                        Aide<span class="icon-fleche header"></span>
+                                        Aide<span class="icon-right-arrow header"></span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="contact.html" class="link white">
-                                        Contact<span class="icon-fleche header"></span>
+                                        Contact<span class="icon-right-arrow header"></span>
                                     </a>
                                 </li>
                             </ul>
@@ -73,35 +76,35 @@
                         <li>
                             <div class="border-left">
                                 <a href="home.html" class="link bleu">
-                                    Accueil<span class="icon-fleche header"></span>
+                                    Accueil<span class="icon-right-arrow header"></span>
                                 </a>
                             </div>
                         </li>
                         <li>
                             <div class="border-left">
                                 <a href="details.html" class="link bleu">
-                                    Détails<span class="icon-fleche header"></span>
+                                    Détails<span class="icon-right-arrow header"></span>
                                 </a>
                             </div>
                         </li>
                         <li>
                             <div class="border-left">
                                 <a href="aide.html" class="link bleu">
-                                    Aide<span class="icon-fleche header"></span>
+                                    Aide<span class="icon-right-arrow header"></span>
                                 </a>
                             </div>
                         </li>
                         <li>
                             <div class="border-left">
                                 <a href="contact.html" class="link bleu">
-                                    Contact<span class="icon-fleche header"></span>
+                                    Contact<span class="icon-right-arrow header"></span>
                                 </a>
                             </div>
                         </li>
                         <li class="visible-xs active">
                             <div class="border-left">
                                 <a href="inscription.html" class="link bleu">
-                                    S'inscrire<span class="icon-fleche header"></span>
+                                    S'inscrire<span class="icon-right-arrow header"></span>
                                 </a>
                             </div>
                         </li>
@@ -109,7 +112,7 @@
                         <li class="visible-xs">
                             <div class="border-left">
                                 <a href="http://lolcloud.internet.lu/" class="link bleu">
-                                    Se connecter<span class="icon-fleche header"></span>
+                                    Se connecter<span class="icon-right-arrow header"></span>
                                 </a>
                             </div>
                         </li>
@@ -124,7 +127,7 @@
                         <div class="title">
                             <h1>Inscription :</h1>
                             <div class="dossier">
-                                <img src="img/Inscription/Icones_INSCRIPTION.png"/>
+                                <img src="img/Inscription/Icones_INSCRIPTION.png" alt="inscription LOL Cloud"/>
                             </div>
                         </div>
                         <aside class="hidden-xs document">
@@ -141,12 +144,12 @@
                             Vous avez choisi la solution LOLCLOUD suivante : <br/>
                         </p>
                         <p class="text">
-                            <img src="img/Inscription/LOL_CLOUD_Free.png" alt="free"/><span style="position: relative; top: 2px; left: 25px;">(5GB/gratuit)</span>
+                            <img src="img/Inscription/LOL_CLOUD_Free.png" alt="offre gratuite LOL Cloud"/><span style="position: relative; top: 2px; left: 25px;">(5GB/gratuit)</span>
                         </p>
                         <div style="margin-top: 55px;">
                             <form name="frmContact" id="frmContact" method="POST" action="/Scripts/sql.exe">
-<input type="hidden" name="Sql" value="lolcloud_mailsend.uhs">
-												<input type="hidden" name="SqlDB" value="LOLPublic">
+                                <input type="hidden" name="Sql" value="lolcloud_mailsend.uhs">
+                                <input type="hidden" name="SqlDB" value="LOLPublic">
                                 <div class="form-group col-md-6 col-sm-12">
                                     <label for="nom">Nom*</label>
                                     <input type="text" class="form-control" id="nom" name="nom" required/>
@@ -160,23 +163,24 @@
                                     <input type="text" class="form-control" id="adresse" name="adresse" required/>
                                 </div>
                                 <div class="form-group right col-md-6 col-sm-12">
-                                    <label for="post">Code Postal*</label>
-                                    <input type="text" class="form-control" id="post" name="post" required/>
+                                    <label for="cp">Code Postal*</label>
+                                    <input type="text" class="form-control" id="cp" name="cp" required/>
                                 </div>
                                 <div class="form-group  col-md-6 col-sm-12">
-                                    <label for="local">Localité*</label>
-                                    <input type="text" class="form-control" id="local" name="local" required/>
+                                    <label for="localite">Localité*</label>
+                                    <input type="text" class="form-control" id="localite" name="localite" required/>
                                 </div>
                                 <div class="form-group right col-md-6 col-sm-12">
-                                    <label for="Tel">Téléphone</label>
-                                    <input type="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" class="form-control" id="tel" name="tel"/>
+                                    <label for="tel">Téléphone</label>
+                                    <input type="tel" class="form-control" id="tel" name="tel"/>
                                 </div>
                                 <div class="form-group col-md-6 col-sm-12">
-                                    <label for="mail">Email*</label>
-                                    <input type="email" class="form-control" id="mail" name="mail" required/>
+                                    <label for="email">Email*</label>
+                                    <input type="email" class="form-control" id="email" name="email" required/>
                                 </div>
+                                <input id="ip_adress" type="hidden" value="" name="ip">
                                 <div class="form-group right col-md-6 col-sm-12">
-                                    <label for="find">Comment nous avez-vous trouvé?</label>
+                                    <label for="referer">Comment nous avez-vous trouvé?</label>
                                     <select class="form-control" id="referer" name="referer">
                                         <option value="" name="empty">-- Choisir proposition --</option>
                                         <option value="Recherche Google" name="Recherche Google">Recherche Google</option>
@@ -189,7 +193,7 @@
                                 </div>
                                 <div class="col-xs-12" style="margin-top: 20px; margin-bottom: 20px;" >
                                     <div class="radio">
-                                        <label><input type="radio" value="oui" name="client"> Je suis déjà client Luxembourg Online</label>
+                                        <label><input type="radio" value="oui" name="client"> Je suis déjà  client Luxembourg Online</label>
                                     </div>
 
                                     <div class="radio">
@@ -197,7 +201,7 @@
                                     </div>
                                 </div>
                                 <div class="submit pull-left">
-                                    <input style="width: 210px;" class="button primary" type="submit" value="Inscrivez-vous">
+                                    <input style="width: 210px;" class="button primary" onclick="getIp()" type="submit" value="Inscrivez-vous">
                                 </div>
                             </form>
                             <p class="text col-xs-12" style="line-height: 25px; margin-top: 30px;">
@@ -207,77 +211,79 @@
                         </div>
                     </div>
 
-<script>
-								$(function(){
-									
-									$(".topMenuEntryText").each(function(){
-										$("#level_1").append("<option data-txt='"+$(this).text()+"' value='"+$(this).text()+"'>"+$(this).text()+"</option>");
-									});
-									$("#level_1").change(function(){
-										loadCb();
-									});
-									
-									var hash_val=[];
-									var hash = window.location.hash;
-									if(hash.length>3){
-										hash = hash.substr(hash.indexOf('#')+1).split("&");
+                    <script>
+                        $(function () {
 
-										for(i in hash){	
-											hash_val[hash[i].split("=")[0]]=hash[i].split("=")[1];
-										}
-										$("option[data-txt='"+hash_val["category"]+"']").prop("selected",true);
-										$("#level_1").change();
-									}
-									
-									loadCb();
-									
-									if(window.location.hash.length>3){
-										$("#level_2 option").each(function(){
-											if($(this).attr("data-link")==hash_val["sub_category"]){
-												$(this).prop("selected",true);
-											}
-										})
-									}
-									$("#send").click(function(){
-										$("#frmContact").submit();
-									});
+                            $(".topMenuEntryText").each(function () {
+                                $("#level_1").append("<option data-txt='" + $(this).text() + "' value='" + $(this).text() + "'>" + $(this).text() + "</option>");
+                            });
+                            $("#level_1").change(function () {
+                                loadCb();
+                            });
 
-								})
-								function getIp(){
-									if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
-									else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                            var hash_val = [];
+                            var hash = window.location.hash;
+                            if (hash.length > 3) {
+                                hash = hash.substr(hash.indexOf('#') + 1).split("&");
 
-									xmlhttp.open("GET","http://api.hostip.info/get_html.php",false);
-									xmlhttp.send();
+                                for (i in hash) {
+                                    hash_val[hash[i].split("=")[0]] = hash[i].split("=")[1];
+                                }
+                                $("option[data-txt='" + hash_val["category"] + "']").prop("selected", true);
+                                $("#level_1").change();
+                            }
 
-									hostipInfo = xmlhttp.responseText.split("\n");
+                            loadCb();
 
-									for (i=0; hostipInfo.length >= i; i++) {
-										ipAddress = hostipInfo[i].split(":");
-										if ( ipAddress[0] == "IP" ){
-											document.getElementById("ip_adress").value = ipAddress[1];
-										}
-									}
-								}
-								
-								function loadCb(){
-									$("#level_2").html("");
-									$(".topMenuEntrySub[data-link='"+$("#level_1").val()+"']").find(".subMenuLink").each(function(i,val){
-										if(($(this).attr("href")=="cloud_bluerh.html" || $(this).attr("href")=="cloud_bluetickets.html" || $(this).attr("href")=="cloud_blueerp.html") && i==0){//temporary fix
-											$("#level_2").append("<option data-link='cloud_blue.html' value='Blue Chameleon'>Blue Chameleon</option>");
-										}else if( $(this).attr("href")!="cloud_bluetickets.html" && $(this).attr("href")!="cloud_blueerp.html"){
-											$("#level_2").append("<option data-link='"+$(this).attr("href")+"' value='"+$(this).text()+"'>"+$(this).text()+"</option>");
-										}
-										
-									});
-									
-									if($("#level_2 option").length<1){
-										
-										$("#level_2").append("<option value='Tous'>[Tous les Services]</option>");
-									}
-									$("#level_2").show();
-								}
-							</script>
+                            if (window.location.hash.length > 3) {
+                                $("#level_2 option").each(function () {
+                                    if ($(this).attr("data-link") == hash_val["sub_category"]) {
+                                        $(this).prop("selected", true);
+                                    }
+                                })
+                            }
+                            $("#send").click(function () {
+                                $("#frmContact").submit();
+                            });
+
+                        })
+                        function getIp() {
+                            if (window.XMLHttpRequest)
+                                xmlhttp = new XMLHttpRequest();
+                            else
+                                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+                            xmlhttp.open("GET", "http://api.hostip.info/get_html.php", false);
+                            xmlhttp.send();
+
+                            hostipInfo = xmlhttp.responseText.split("\n");
+
+                            for (i = 0; hostipInfo.length >= i; i++) {
+                                ipAddress = hostipInfo[i].split(":");
+                                if (ipAddress[0] == "IP") {
+                                    document.getElementById("ip_adress").value = ipAddress[1];
+                                }
+                            }
+                        }
+
+                        function loadCb() {
+                            $("#level_2").html("");
+                            $(".topMenuEntrySub[data-link='" + $("#level_1").val() + "']").find(".subMenuLink").each(function (i, val) {
+                                if (($(this).attr("href") == "cloud_bluerh.html" || $(this).attr("href") == "cloud_bluetickets.html" || $(this).attr("href") == "cloud_blueerp.html") && i == 0) {//temporary fix
+                                    $("#level_2").append("<option data-link='cloud_blue.html' value='Blue Chameleon'>Blue Chameleon</option>");
+                                } else if ($(this).attr("href") != "cloud_bluetickets.html" && $(this).attr("href") != "cloud_blueerp.html") {
+                                    $("#level_2").append("<option data-link='" + $(this).attr("href") + "' value='" + $(this).text() + "'>" + $(this).text() + "</option>");
+                                }
+
+                            });
+
+                            if ($("#level_2 option").length < 1) {
+
+                                $("#level_2").append("<option value='Tous'>[Tous les Services]</option>");
+                            }
+                            $("#level_2").show();
+                        }
+                    </script>
                     <aside class="visible-xs col-xs-12 document" style="margin-top: 30px;">
                         <h3>DOCUMENTS:</h3>
                         <ul>
@@ -303,7 +309,7 @@
                 </div>
                 <div class="bottom row">
                     <div class="logo grand visible-xs-block">
-                        <img src="img/Logo_LOL_CLOUD.png"/>
+                        <img src="img/Logo_LOL_CLOUD.png" alt="Logo LOL Cloud"/>
                     </div>
                     <div class="text">
                         <h2>POURQUOI LOL<span>CLOUD</span> ?</h2>
@@ -311,7 +317,7 @@
                         <p>Le service de stockage en ligne de Luxembourg Online vous permet de conserver et partager des documents, images, vidéos dans un espace en ligne, accessible de partout.</p>
                     </div>
                     <div class="logo grand hidden-xs">
-                        <img src="img/Logo_LOL_CLOUD.png"/>
+                        <img src="img/Logo_LOL_CLOUD.png" alt="Logo LOL Cloud"/>
                     </div>
                 </div>
             </div>
@@ -355,7 +361,6 @@
                 </div>
             </div>
         </footer>
-        <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

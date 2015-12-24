@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>LOLCLOUD</title>
+        <title>LOLCloud - Service de stockage en ligne</title>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="Vos fichiers, partout où vous voulez ! Le service de stockage en ligne de Luxembourg Online vous permet de conserver et de partager tous vos documents."/>
+        <meta name="keywords" content=" Service Cloud, solution Cloud, service de stockage en ligne, stockage de données en ligne, partage de fichiers, sauvegarde en ligne, LOL Cloud"/>
         <link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
         <link href="css/styles.css" type="text/css" rel="stylesheet"/>
-        <link href="https://fontastic.s3.amazonaws.com/7Lk7oZi2gTuyXPswkuacSb/icons.css" rel="stylesheet">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -21,10 +22,10 @@
                 <div class="container" style="height: 100%;">
                     <div class="row">
                         <div class="logo petit" style="margin-top: 13px;">
-                            <a href="index.html"><img src="img/Logo_LOL_CLOUD.png" alt="logo-header"/></a>
+                            <a href="index.html"><img src="img/Logo_LOL_CLOUD.png" alt="Logo LOL Cloud"/></a>
                         </div>
                         <nav id="android1" class="navigation gras hidden-xs">
-                            <a class="link white solid" href="LOLCloud.apk">Télécharger application android<span class="icon-fleche header"></span></a>
+                            <a class="link white solid" href="LOLCloud.apk">Télécharger application android<span style="font-size: 0.9em; top: 2px; margin-left: 9px;" class="icon-right-arrow header"></span></a>
                         </nav>
                         <nav id="drop" class="semi-opac visible-xs">
                             <a href="#">
@@ -41,7 +42,7 @@
                     </div>
                     <ul id="dropdown">
                         <li>
-                            <div class="border-left"><a class="link bleu" href="LOLCloud.apk">Télécharger app android<span class="icon-fleche header"></span></a></div>
+                            <div class="border-left"><a class="link bleu" href="LOLCloud.apk">Télécharger app android<span style="font-size: 0.8em; top: 6px; left: 6px;" class="icon-right-arrow header"></span></a></div>
                         </li>
                     </ul>
                 </div>
@@ -50,9 +51,8 @@
 
         <section class="container index">
             <div class="row">
-
                 <div id="mockup" class="  col-md-push-0 col-sm-3 col-md-4 col-xs-12">
-                    <img style="text-align: right" src="img/Acceuil/Animation_homepage.gif" alt="animation home"/>
+                    <img style="text-align: right" src="img/Acceuil/Animation_homepage.gif" alt="LOL Cloud homepage devices"/>
                 </div>
 
                 <div class="droite col-md-push-3 col-md-5 col-sm-7 col-xs-12">
@@ -69,7 +69,7 @@
                         <a href="http://lolcloud.internet.lu/"><button class="button default">Se connecter</button></a>
                     </div>
                     <div class="row">
-                        <a id="more" class="link" href="home.html">En savoir plus<span class="icon-fleche plus"></span></a>
+                        <a id="more" class="link" href="home.html">En savoir plus<span style="position: relative; font-size: 0.7em; margin-left: 7px; top: 1px;" class="icon-right-arrow plus"></span></a>
                     </div>
                 </div>
             </div>
@@ -89,11 +89,11 @@
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
-                var ua = navigator.userAgent.toLowerCase();
-                var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-                if (!isAndroid) {
-                    $('#drop>a,#android1').hide();
-                }
+            var ua = navigator.userAgent.toLowerCase();
+            var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+            if (!isAndroid) {
+                $('#drop>a,#android1').hide();
+            }
         </script>
     </body>
 </html>

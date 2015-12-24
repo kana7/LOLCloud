@@ -1,12 +1,17 @@
 @charset "UTF-8";
-/* Gobal variiables*/
+
 @font-face {
   font-family: "cloud";
-  src: url("../font/cloud.eot");
-  src: url("../font/cloud.eot?#iefix") format("embedded-opentype"), url("../font/cloud.woff") format("woff"), url("../font/cloud.ttf") format("truetype"), url("../font/cloud.svg#cloud") format("svg");
+  src:url("fonts/cloud.eot");
+  src:url("fonts/cloud.eot?#iefix") format("embedded-opentype"),
+    url("fonts/cloud.woff") format("woff"),
+    url("fonts/cloud.ttf") format("truetype"),
+    url("fonts/cloud.svg#cloud") format("svg");
   font-weight: normal;
   font-style: normal;
+
 }
+
 [data-icon]:before {
   font-family: "cloud" !important;
   content: attr(data-icon);
@@ -19,6 +24,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: "cloud" !important;
@@ -31,7 +37,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .icon-right-arrow:before {
   content: "\61";
 }
-/*# sourceMappingURL=variables.css.map */
